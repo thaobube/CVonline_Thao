@@ -1,0 +1,174 @@
+// xsmall: mobile version (~ 360px)
+#section-experiences {
+    padding: 50px 0 20px 0; 
+    margin: 0;
+  }
+.carousel {  
+  margin: 80px 0 50px 0;
+  &__content {    
+    display: flex;  
+    justify-content: center;
+    .arrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        i {
+          font-size: 2.5rem;
+          color: $color-primary;
+        }
+        &--previous {
+          margin-right: 3vw;
+          cursor: pointer;
+        } 
+        &--next {
+            margin-left: 3vw;           
+            cursor: pointer;
+        } 
+    }
+    .slide-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        .slide {        
+          transition: all 2s ease;
+          display: none;
+          width: 280px;
+          height: 400px;
+          margin: 10px 0;
+          position: relative;
+          background-color: $color-white;
+          box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.45);
+          &__logo {
+              background-color: $grey-primary;
+              border: 8px $color-white solid;
+              box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.45);
+              width: 130px;
+              height: 130px;
+              border-radius: 50%;
+              padding: 15px 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              left: 50%;
+              top: -15%;
+              transform: translate(-50%, 0);
+              img {
+                  width: 80%;
+                  display: block;
+              }
+          }
+          &__heading {
+              text-transform: uppercase;
+              font-weight: 700;
+              padding-top: 80px;          
+              color: $color-primary;                    
+              margin: 10px 20px;
+          }
+          &__title, &__description {
+              color: $dark-primary;
+          }
+          &__title {
+              text-align: left; 
+              margin: 20px 0 0 20px;
+              font-weight: 700;
+          }
+          &__description {
+            text-align: left;
+            margin: 0px 20px;
+            font-size: 0.88rem;
+          }
+          hr {
+            display: inline-block;
+            width: 240px;
+            height: 1px;
+            border: none;
+            border-top: 1px solid $color-primary;
+            position: absolute;
+            left: 50%;
+            bottom: 12%;
+            transform: translate(-50%, 0);
+          }
+          &__duration {
+            font-size: 0.9rem;
+            position: absolute;
+            left: 50%;
+            bottom: 6%;
+            transform: translate(-50%, 0);
+          }
+          &:nth-child(1){
+            display: block;
+          }
+        }
+        .slide--empty {
+            visibility:hidden;
+        }
+    }  
+  }
+  &__dots {
+      display: inline;
+      .fa-circle, .current-dot {
+          font-size: 0.7rem;         
+      }
+      .fa-circle {
+        color: $grey-primary; 
+        cursor: pointer;
+      }
+      .current-dot {
+        color: $color-primary; 
+        cursor: pointer;
+      }
+  } 
+}
+
+// Medium: ≥768px
+@media only screen and (min-width: 768px) {
+    .carousel {
+        &__content {
+            .slide-container {
+                .slide {
+                    margin: 10px 20px;
+                    &:nth-child(1){
+                        display: block;
+                    }
+                    &:nth-child(2){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Large: ≥992px
+@media only screen and (min-width: 992px) {
+    .carousel {        
+        &__content {
+            .arrow {
+                &--previous {
+                    margin-right: 1vw;
+                } 
+                &--next {
+                    margin-left: 1vw;
+                }
+            }    
+            .slide-container {
+                .slide {
+                    margin: 10px 1vw;
+                    &:nth-child(1){
+                        display: block;
+                    }
+                    &:nth-child(2){
+                        display: block;
+                    }
+                    &:nth-child(3){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+} 
+

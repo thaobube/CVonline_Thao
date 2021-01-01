@@ -1,0 +1,25 @@
+.section-title {
+    &--main{
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    &--sub {
+      margin: 10px 0 20px 0;
+      font-style: italic;
+    }
+    &__hr{
+      display: inline-block;
+      height: 3px;
+      border: none;
+      &--above{
+        width: 40px;
+        border-top: 3px solid $dark-primary;
+      }
+      &--below {
+        width: 60px;
+        border-top: 1px solid $dark-primary;
+        margin-top: -5px;
+      }
+    }
+  }
