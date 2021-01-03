@@ -12,19 +12,33 @@ app.innerHTML = renderApp();
 // Get all elements
 
 const sectionSkills = document.getElementById('section-skills');
-// const sectionEducation = document.getElementById('section-education');
+const sectionEducation = document.getElementById('section-education');
 const sectionExperiences = document.getElementById('section-experiences');
 
 // Rendering all sections by default
 sectionSkills.innerHTML = renderSkills();
-// sectionEducation.innerHTML = renderEducation();
+sectionEducation.innerHTML = renderEducation();
 sectionExperiences.innerHTML = renderExperiences();
 
-/* ------- Event for section Skills----------- */
+/* ------- Event for the section Skills----------- */
 // Calling the event of the section Skill:
 eventSkills(sectionSkills);
 
-/* ------- Event for section Experiences----------- */
+/* ------- Event for the section Education----------- */
+sectionEducation.addEventListener('click', (e) => {
+  if (e.target.matches('.info__title')) {
+    // hide the previous item
+    const infoVisible = sectionEducation.querySelector('.info');
+    infoVisible.classList.remove('info');
+    infoVisible.classList.add('info--hidden');
+    // display the clicked item
+    console.log(e.target.parentNode);
+    e.target.parentNode.classList.remove('info--hidden');
+    e.target.parentNode.classList.add('info');
+  }
+});
+
+/* ------- Event for the section Experiences----------- */
 sectionExperiences.addEventListener('click', (e) => {
   // Event when clicking to next arrow
   if (e.target.matches('.fa-angle-right')) {

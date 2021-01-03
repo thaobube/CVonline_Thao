@@ -1,5 +1,246 @@
 // xsmall: mobile version (~ 360px)
 #section-education {
-    padding: 30px 0; 
-    // chen anh nen
+    padding: 50px 0 80px 0; 
+    // notes: url of '_education.scss' will be imported to 'styles.scss' => the path will be based on the 'styles.scss'
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url('./static/images/education.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: $color-white;
+}
+
+.timeline {
+    transition: all ease-in-out 1s;
+    display: flex;
+    &__vertical-line {
+        min-width: 103px;
+        margin-left: 0px;
+        border-right: 2px $grey-primary solid;
+    }
+    &__content {
+        .line {
+            position: relative;              
+            // margin-left: 14px;
+            // margin-top: 30px;            
+            // margin-right: 10px;
+            margin: 20px 10px 20px 14px;
+            .time {
+                width: 88px;
+                height: 24px;                
+                color: $dark-primary;
+                clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+                line-height: 24px;
+                text-align: left;
+                padding-left: 3px;
+                font-size: 0.9rem;
+                position: absolute;
+                left: -113px;
+                top: 5px;
+            }
+            .dot {                
+                position: absolute;
+                top: 11px;
+                left: -21px;
+                background-color: $dark-primary;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: $grey-primary 3px solid;
+            }
+            .info, .info--hidden {
+                // border: yellow 1px solid;
+                text-align: left;
+                padding: 5px 0px 5px 8px;
+                // erase 1 part of border of the speech bubble
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 3px;
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 28px, 3% 28px, 3% 8px, 0% 8px);
+                }
+                // create the arrow of the speech bubble
+                &::after {
+                    content: '';
+                    width: 9px;
+                    height: 24px;
+                    position: absolute;
+                    top: 6px;
+                    left: -7.8px;
+                    clip-path: polygon(100% 0%, 0% 50%, 100% 100%, 100% calc(24px - 2px), 2px 50%, 100% 2px);
+                }
+                .info__title {
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+                .info__subtitle {
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                }
+                .info__description {
+                    margin-top: 20px;
+                    font-weight: 300;
+                    font-size: 0.85rem;                    
+                }
+            }
+            .info--hidden {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+                .info__subtitle {
+                    display: none;
+                }
+                .info__description {
+                    display: none;
+                }
+            }            
+            &:nth-child(odd) {
+                .time {
+                    background-color: $color-primary;
+                }
+                .info {
+                    &__title {                        
+                        color: $color-primary;
+                    }
+                    &::before {
+                        border: $color-primary 2px solid;
+                    }
+                    &::after {                        
+                        background: $color-primary;
+                    }
+                }                    
+            }
+            &:nth-child(even) {
+                .time {
+                    background-color: $color-secondary;
+                }
+                .info {
+                    &__title {                        
+                        color: $color-secondary;
+                    }
+                    &::before {
+                        border: $color-secondary 2px solid;
+                    }
+                    &::after {                        
+                        background: $color-secondary;
+                    }
+                }                    
+            }
+        }
+    }
+}
+
+// Medium: ≥768px
+@media only screen and (min-width: 768px) {
+    .timeline {
+        margin: 5px auto;
+        &__vertical-line {
+            width: 50%;
+            border-right: 2px $grey-primary solid;
+        }
+        &__content {
+            width: 50%;
+            .line {
+                position: relative;  
+                margin-top: 30px;
+                width: 330px;
+                .info, .info--hidden {
+                    .info__title {
+                        font-size: 1.2rem;
+                    }
+                    .info__subtitle {
+                        font-size: 1.1rem;
+                    }
+                    .info__description {
+                        font-size: 1rem;                    
+                    }
+                }
+                &:nth-child(even) {
+                    .time {
+                        clip-path: polygon(100% 0%, 100% 100%, 20% 100%, 0% 50%, 20% 0%);
+                        text-align: right;
+                        padding-right: 3px;
+                        left: -2px;
+                        top: 5px;
+                    }
+                    .info, .info--hidden {
+                        position: relative;
+                        left: -365px;
+                        text-align: right;
+                        padding-right: 8px;                        
+                        &::before {
+                            clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 28px, 97% 28px, 97% 8px, 100% 8px);
+                        }
+                        &::after {
+                            clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% calc(24px - 2px), calc(9px - 2px) 50%, 0% 2px);
+                            left: 333px;
+                        }
+                    } 
+                }
+
+            }
+        }
+            
+    }
+}
+
+// Large: ≥992px
+@media only screen and (min-width: 992px) {
+    .timeline {
+        margin: 5px auto;
+        &__vertical-line {
+            width: 50%;
+            border-right: 2px $grey-primary solid;
+        }
+        &__content {
+            width: 50%;
+            .line {
+                position: relative;  
+                margin-top: 30px;
+                width: 450px;
+                .info, .info--hidden {
+                    .info__title {
+                        font-size: 1.25rem;
+                    }
+                    .info__subtitle {
+                        font-size: 1.15rem;
+                    }
+                    .info__description {
+                        font-size: 1.1rem;                    
+                    }
+                }
+                &:nth-child(even) {
+                    .time {
+                        clip-path: polygon(100% 0%, 100% 100%, 20% 100%, 0% 50%, 20% 0%);
+                        text-align: right;
+                        padding-right: 3px;
+                        left: 8px;
+                        top: 5px;
+                    }
+                    .info, .info--hidden {
+                        position: relative;
+                        left: -485px;
+                        text-align: right;
+                        padding-right: 8px;                        
+                        &::before {
+                            clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 28px, 97% 28px, 97% 8px, 100% 8px);
+                        }
+                        &::after {
+                            clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% calc(24px - 2px), calc(9px - 2px) 50%, 0% 2px);
+                            left: 453px;
+                        }
+                    } 
+                }
+
+            }
+        }
+            
+    }
 }
