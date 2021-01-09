@@ -1,5 +1,6 @@
 import './styles.scss';
 import { renderApp } from './src/views/basic-layout';
+import { renderHeader } from './src/views/header';
 import { renderSkills, eventSkills } from './src/views/section-skills';
 import { renderEducation } from './src/views/section-education';
 import { renderExperiences, nextSlide, previousSlide } from './src/views/section-experiences';
@@ -10,15 +11,28 @@ const app = document.getElementById('app');
 app.innerHTML = renderApp();
 
 // Get all elements
-
+const header = document.querySelector('header');
 const sectionSkills = document.getElementById('section-skills');
 const sectionEducation = document.getElementById('section-education');
 const sectionExperiences = document.getElementById('section-experiences');
 
 // Rendering all sections by default
+header.innerHTML = renderHeader();
 sectionSkills.innerHTML = renderSkills();
 sectionEducation.innerHTML = renderEducation();
 sectionExperiences.innerHTML = renderExperiences();
+
+/* ------- Event for the header----------- */
+header.addEventListener('click', (e) => {
+  if (e.target.matches('.bar')) {
+    e.target.parentNode.classList.toggle('open');
+    const menu = e.target.closest('#menu');
+    // console.log(menu);
+    const nav = menu.querySelector('.nav');
+    // console.log(nav);
+    nav.classList.toggle('open-nav');
+  }
+});
 
 /* ------- Event for the section Skills----------- */
 // Calling the event of the section Skill:
@@ -32,7 +46,6 @@ sectionEducation.addEventListener('click', (e) => {
     infoVisible.classList.remove('info');
     infoVisible.classList.add('info--hidden');
     // display the clicked item
-    console.log(e.target.parentNode);
     e.target.parentNode.classList.remove('info--hidden');
     e.target.parentNode.classList.add('info');
   }
@@ -53,7 +66,7 @@ sectionExperiences.addEventListener('click', (e) => {
     const index = e.target.id;
     // Note:'index' is string, it is necessary to convert into number
     state.currentFirstIndex = parseInt(index, 10);
-    console.log(state.currentFirstIndex);
+    // console.log(state.currentFirstIndex);
     sectionExperiences.innerHTML = renderExperiences();
   }
 });

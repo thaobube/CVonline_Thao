@@ -70,7 +70,7 @@ export const nextSlide = () => {
   } else {
     state.currentFirstIndex += 0;
   }
-  console.log(state.currentFirstIndex);
+  // console.log(state.currentFirstIndex);
   return renderExperiences(state.currentFirstIndex);
 };
 export const previousSlide = () => {
