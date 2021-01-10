@@ -2,6 +2,7 @@ import './styles.scss';
 import { renderApp } from './src/views/basic-layout';
 import { renderHeader } from './src/views/header';
 import { renderSkills, eventSkills } from './src/views/section-skills';
+import { renderPortfolio } from './src/views/section-portfolio';
 import { renderEducation } from './src/views/section-education';
 import { renderExperiences, nextSlide, previousSlide } from './src/views/section-experiences';
 import { state } from './src/data/state';
@@ -13,12 +14,14 @@ app.innerHTML = renderApp();
 // Get all elements
 const header = document.querySelector('header');
 const sectionSkills = document.getElementById('section-skills');
+const sectionPortfolio = document.getElementById('section-portfolio');
 const sectionEducation = document.getElementById('section-education');
 const sectionExperiences = document.getElementById('section-experiences');
 
 // Rendering all sections by default
 header.innerHTML = renderHeader();
 sectionSkills.innerHTML = renderSkills();
+sectionPortfolio.innerHTML = renderPortfolio();
 sectionEducation.innerHTML = renderEducation();
 sectionExperiences.innerHTML = renderExperiences();
 

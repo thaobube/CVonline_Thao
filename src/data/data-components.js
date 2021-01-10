@@ -25,3 +25,8 @@ export const sectionTitle = {
     subTitle: 'Get in touch!',
   },
 };
+
+// Data for the navigation
+export const nav = [
+  'about', 'skills', 'portfolio', 'education', 'experience', 'contact',
+];

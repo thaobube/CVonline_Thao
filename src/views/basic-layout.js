@@ -3,6 +3,8 @@ export const renderApp = () => `
     <header></header>
     <section id="section-skills">
     </section>
+    <section id="section-portfolio">
+    </section>
     <section id="section-education">
     </section>
     <section id="section-experiences">

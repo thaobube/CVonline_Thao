@@ -1,0 +1,102 @@
+#button {
+    background: $grey-primary;
+}
+
+// For the btn: &::before, &::after =>  background: using the background of the container
+.btn {
+    position: relative;
+    display: inline-block;
+    border: 1px solid $dark-primary;
+    color: $dark-primary;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 3px 20px;
+    // font-weight: 700;
+    font-size: 1rem;
+    margin: 5px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% - 16px);
+        transition: 0.5s ease-in-out;
+        // background: $grey-primary;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: -2px;
+        width: calc(100% - 16px);
+        height: calc(100% + 4px);
+        transition: 0.5s ease-in-out;
+        // background: $grey-primary;
+    }
+    &:hover {
+        font-weight: 700;
+    }
+    span {
+        position: relative;
+        z-index: 3;
+    }
+}
+// For the btn-unfilled: scaleY and scaleX from 1=>0
+.btn-unfilled {
+    &::before {
+        transform: scaleY(1);
+    }
+    &:hover::before {
+        transform: scaleY(0);        
+    }
+    &::after {
+        transform: scaleX(1);
+    }
+    &:hover::after {
+        transform: scaleX(0);        
+    }
+}
+
+// For the btn-filled: scaleY and scaleX from 0=>1;&: background=> choose the color we want, &:hover => background: transparent;
+.btn-filled {
+    background: pink;
+    &::before {
+        transform: scaleY(0);
+    }
+    &:hover::before {
+        transform: scaleY(1);        
+    }
+    &::after {
+        transform: scaleX(0);
+    }
+    &:hover::after {
+        transform: scaleX(1);        
+    }
+    &:hover {
+        background: transparent;
+    }
+}
+
+.btn-darkF {
+    background: $dark-primary;
+    color: $color-white;
+    &::before, &::after {       
+        background: $color-white;
+    }
+    &:hover {
+        color: $dark-primary;
+    }
+}
+
+.btn-whiteU {
+    &::before, &::after {       
+        background: $color-white;
+    }
+}
+.btn-whiteF {
+    background: $color-white;
+    &::before, &::after {       
+        background: $color-white;
+    }
+}

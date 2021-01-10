@@ -1,4 +1,4 @@
-import { nav } from '../data/data';
+import { nav } from '../data/data-components';
 
 export const renderHeader = () => {
   let content = `        
