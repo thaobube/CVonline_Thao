@@ -4,6 +4,9 @@ import { renderHeader } from './src/views/header';
 import { renderAbout } from './src/views/section-about';
 import { renderSkills, eventSkills } from './src/views/section-skills';
 import { renderPortfolio } from './src/views/section-portfolio';
+import {
+  portfolioAll, portfolioAsp, portfolioJs, portfolioPhp, portfolioMobile, portfolioOther,
+} from './src/data/data-portfolio';
 import { renderEducation } from './src/views/section-education';
 import { renderExperiences, nextSlide, previousSlide } from './src/views/section-experiences';
 import { state } from './src/data/state';
@@ -43,17 +46,60 @@ header.addEventListener('click', (e) => {
 /* ------- Event for the section About---------- */
 sectionAbout.addEventListener('click', (e) => {
   if (e.target.matches('.btn-me')) {
+    e.preventDefault();
     state.aboutMeButton = true;
     sectionAbout.innerHTML = renderAbout();
   }
   if (e.target.matches('.btn-code')) {
+    e.preventDefault();
     state.aboutMeButton = false;
     sectionAbout.innerHTML = renderAbout();
   }
 });
+
 /* ------- Event for the section Skills----------- */
 // Calling the event of the section Skill:
 eventSkills(sectionSkills);
+
+/* ------- Event for the section Portfolio---------- */
+sectionPortfolio.addEventListener('click', (e) => {
+  if (e.target.matches('.btn-all')) {
+    e.preventDefault();
+    state.currentArray = portfolioAll;
+    state.currentPortfolioButton = 'all';
+    sectionPortfolio.innerHTML = renderPortfolio();
+  }
+  if (e.target.matches('.btn-asp')) {
+    e.preventDefault();
+    state.currentArray = portfolioAsp;
+    state.currentPortfolioButton = 'asp';
+    sectionPortfolio.innerHTML = renderPortfolio();
+  }
+  if (e.target.matches('.btn-js')) {
+    e.preventDefault();
+    state.currentArray = portfolioJs;
+    state.currentPortfolioButton = 'js';
+    sectionPortfolio.innerHTML = renderPortfolio();
+  }
+  if (e.target.matches('.btn-php')) {
+    e.preventDefault();
+    state.currentArray = portfolioPhp;
+    state.currentPortfolioButton = 'php';
+    sectionPortfolio.innerHTML = renderPortfolio();
+  }
+  if (e.target.matches('.btn-mobile')) {
+    e.preventDefault();
+    state.currentArray = portfolioMobile;
+    state.currentPortfolioButton = 'mobile';
+    sectionPortfolio.innerHTML = renderPortfolio();
+  }
+  if (e.target.matches('.btn-other')) {
+    e.preventDefault();
+    state.currentArray = portfolioOther;
+    state.currentPortfolioButton = 'other';
+    sectionPortfolio.innerHTML = renderPortfolio();
+  }
+});
 
 /* ------- Event for the section Education----------- */
 sectionEducation.addEventListener('click', (e) => {

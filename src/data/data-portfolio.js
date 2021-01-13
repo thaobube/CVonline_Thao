@@ -1,4 +1,4 @@
-export const portfolio = [
+export const portfolioAll = [
   {
     img: 'project1.jpg',
     title: 'Project 1',
@@ -26,7 +26,7 @@ export const portfolio = [
   {
     img: 'project5.jpg',
     title: 'Project 5',
-    language: 'other',
+    language: 'mobile',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
@@ -41,19 +41,28 @@ export const portfolio = [
     language: 'js',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
-  // {
-  //   img: 'project8.jpg',
-  //   title: 'Project 8',
-  //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  // },
-  // {
-  //   img: 'project9.jpg',
-  //   title: 'Project 9',
-  //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  // },
-  // {
-  //   img: 'project10.jpg',
-  //   title: 'Project 10',
-  //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  // },
+  {
+    img: 'project8.jpg',
+    title: 'Project 8',
+    language: 'other',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    img: 'project9.jpg',
+    title: 'Project 9',
+    language: 'js',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    img: 'project10.jpg',
+    title: 'Project 10',
+    language: 'asp',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
 ];
+
+export const portfolioAsp = portfolioAll.filter((el) => el.language.includes('asp'));
+export const portfolioJs = portfolioAll.filter((el) => el.language.includes('js'));
+export const portfolioPhp = portfolioAll.filter((el) => el.language.includes('php'));
+export const portfolioMobile = portfolioAll.filter((el) => el.language.includes('mobile'));
+export const portfolioOther = portfolioAll.filter((el) => el.language.includes('other'));
