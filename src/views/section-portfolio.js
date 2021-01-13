@@ -2,19 +2,16 @@ import { sectionTitle } from '../data/data-components';
 import { portfolio } from '../data/data-portfolio';
 import { createSectionTitle, createButton } from '../helpers/component-functions';
 
-/* -----------Create the function renderExperiences------------ */
-// to display all cards from the current first indext in the carousel
-// (the CSS will display 1,2 or 3 depend on the screen size)
 export const renderPortfolio = () => {
   let content = `
   ${createSectionTitle(sectionTitle.portfolio)}
   <div class="filters">
-    ${createButton('all', 'filled', 'darkF')}
-    ${createButton('C# (.NET)', 'filled', 'whiteF')}
-    ${createButton('Javascript', 'filled', 'whiteF')}
-    ${createButton('PHP', 'filled', 'whiteF')}
-    ${createButton('mobile', 'filled', 'whiteF')}
-    ${createButton('other', 'filled', 'whiteF')}
+    ${createButton('all', 'filled', 'darkF', '')}
+    ${createButton('C# (.NET)', 'filled', 'whiteF', '')}
+    ${createButton('Javascript', 'filled', 'whiteF', '')}
+    ${createButton('PHP', 'filled', 'whiteF', '')}
+    ${createButton('mobile', 'filled', 'whiteF', '')}
+    ${createButton('other', 'filled', 'whiteF', '')}
   </div>
   <div class="card-container">
   `;

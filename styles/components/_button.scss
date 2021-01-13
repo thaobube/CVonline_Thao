@@ -81,6 +81,7 @@
 .btn-darkF {
     background: $dark-primary;
     color: $color-white;
+    z-index: 0;
     &::before, &::after {       
         background: $color-white;
     }

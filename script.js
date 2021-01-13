@@ -1,6 +1,7 @@
 import './styles.scss';
 import { renderApp } from './src/views/basic-layout';
 import { renderHeader } from './src/views/header';
+import { renderAbout } from './src/views/section-about';
 import { renderSkills, eventSkills } from './src/views/section-skills';
 import { renderPortfolio } from './src/views/section-portfolio';
 import { renderEducation } from './src/views/section-education';
@@ -13,6 +14,7 @@ app.innerHTML = renderApp();
 
 // Get all elements
 const header = document.querySelector('header');
+const sectionAbout = document.getElementById('section-about');
 const sectionSkills = document.getElementById('section-skills');
 const sectionPortfolio = document.getElementById('section-portfolio');
 const sectionEducation = document.getElementById('section-education');
@@ -20,6 +22,7 @@ const sectionExperiences = document.getElementById('section-experiences');
 
 // Rendering all sections by default
 header.innerHTML = renderHeader();
+sectionAbout.innerHTML = renderAbout();
 sectionSkills.innerHTML = renderSkills();
 sectionPortfolio.innerHTML = renderPortfolio();
 sectionEducation.innerHTML = renderEducation();
@@ -37,6 +40,17 @@ header.addEventListener('click', (e) => {
   }
 });
 
+/* ------- Event for the section About---------- */
+sectionAbout.addEventListener('click', (e) => {
+  if (e.target.matches('.btn-me')) {
+    state.aboutMeButton = true;
+    sectionAbout.innerHTML = renderAbout();
+  }
+  if (e.target.matches('.btn-code')) {
+    state.aboutMeButton = false;
+    sectionAbout.innerHTML = renderAbout();
+  }
+});
 /* ------- Event for the section Skills----------- */
 // Calling the event of the section Skill:
 eventSkills(sectionSkills);

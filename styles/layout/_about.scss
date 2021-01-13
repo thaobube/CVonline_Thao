@@ -1,0 +1,122 @@
+// Version mobile 
+#section-about {
+    padding: 150px 0 80px 0;
+}
+.about-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        margin: 0 auto;
+        .photo-shadow {
+            width: 150px;
+            height: 150px;
+            border: $dark-primary solid 9px;
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+            top: 17%;
+            left: 9%;
+        }
+        img {
+            width: 150px;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 0;
+            top: 10%;
+            left: 14%;
+        }
+    }
+    .about {
+        &__option {
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+        }
+        &__content {
+            text-align: left;
+            .about-me, .about-code  {
+                margin: 20px 20px 10px 20px;
+                font-size: 0.9rem;
+            }
+            .about-me {
+                // display: none;
+                display: block;
+            }
+            .about-code {
+                // display: none;
+                display: block;
+            }
+        }
+    }
+}
+// Small: ≥576px
+@media only screen and (min-width: 576px) {
+    .about-container {
+        width: 80%;
+        .about {
+            &__content {
+                .about-me, .about-code  {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+// Large screen: ≥992px
+@media only screen and (min-width: 992px) {
+    .about-container {    
+        display: flex;
+        max-width: 1000px;
+        margin: 80px auto;
+        .profile-photo {
+            width: 35vw;
+            .photo-shadow {
+                width: 15vw;
+                max-width: 210px;
+                height: 15vw;
+                max-height: 210px;
+                border: $dark-primary solid 11px;
+                border-radius: 50%;
+                position: absolute;
+                z-index: -1;
+                top: 17%;
+                left: 0%;
+            }
+            img {
+                width: 15vw;
+                max-width: 210px;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 0;
+                top: 10%;
+                left: 5%;
+            }
+        }
+        .about {
+            &__option {
+                display: flex;
+                justify-content: start;
+                padding-left: 15px;
+            }
+            &__content {
+                text-align: left;
+                .about-me, .about-code  {
+                    margin: 40px 20px 10px 20px;
+                }
+                .about-me {
+                    // display: none;
+                    display: block;
+                }
+                .about-code {
+                    // display: none;
+                    display: block;
+                }
+            }
+        }
+    }
+}
