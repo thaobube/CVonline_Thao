@@ -1,4 +1,4 @@
-import { portfolioAll } from './data-portfolio';
+import { portfolioAll } from '../portfolio/data-portfolio';
 
 export const state = {
   currentFirstIndex: 0,

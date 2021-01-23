@@ -1,6 +1,7 @@
-import { sectionTitle } from '../data/data-components';
-import { state } from '../data/state';
-import { createSectionTitle, createButton } from '../helpers/component-functions';
+import { sectionTitle } from '../components/section-title/data-section-title';
+import { state } from '../base/state';
+import { createSectionTitle } from '../components/section-title/section-title';
+import { createButton } from '../components/button/button';
 
 export const renderPortfolio = () => {
   let content = `

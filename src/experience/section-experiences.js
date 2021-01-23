@@ -1,7 +1,7 @@
-import { sectionTitle } from '../data/data-components';
-import { experiences } from '../data/data-experiences';
-import { createSectionTitle } from '../helpers/component-functions';
-import { state } from '../data/state';
+import { sectionTitle } from '../components/section-title/data-section-title';
+import { experiences } from './data-experiences';
+import { createSectionTitle } from '../components/section-title/section-title';
+import { state } from '../base/state';
 
 /* -----------Create the function renderExperiences------------ */
 // to display all cards from the current first indext in the carousel

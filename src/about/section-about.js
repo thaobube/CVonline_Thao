@@ -1,7 +1,8 @@
-import { sectionTitle } from '../data/data-components';
-import { about } from '../data/data-about';
-import { createSectionTitle, createButton } from '../helpers/component-functions';
-import { state } from '../data/state';
+import { sectionTitle } from '../components/section-title/data-section-title';
+import { about } from './data-about';
+import { createSectionTitle } from '../components/section-title/section-title';
+import { createButton } from '../components/button/button';
+import { state } from '../base/state';
 
 export const renderAbout = () => {
   let content = `

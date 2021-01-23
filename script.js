@@ -1,15 +1,16 @@
 import './styles.scss';
-import { renderApp } from './src/views/basic-layout';
-import { renderHeader } from './src/views/header';
-import { renderAbout } from './src/views/section-about';
-import { renderSkills, eventSkills } from './src/views/section-skills';
-import { renderPortfolio } from './src/views/section-portfolio';
+import { renderApp } from './src/base/basic-layout';
+import { renderHeader } from './src/header/header';
+import { renderAbout } from './src/about/section-about';
+import { renderSkills, eventSkills } from './src/skill/section-skills';
+import { renderPortfolio } from './src/portfolio/section-portfolio';
 import {
   portfolioAll, portfolioAsp, portfolioJs, portfolioPhp, portfolioMobile, portfolioOther,
-} from './src/data/data-portfolio';
-import { renderEducation } from './src/views/section-education';
-import { renderExperiences, nextSlide, previousSlide } from './src/views/section-experiences';
-import { state } from './src/data/state';
+} from './src/portfolio/data-portfolio';
+import { renderEducation } from './src/education/section-education';
+import { renderExperiences, nextSlide, previousSlide } from './src/experience/section-experiences';
+import { renderContact } from './src/contact/section-contact';
+import { state } from './src/base/state';
 
 // Construction of the basic layout
 const app = document.getElementById('app');
@@ -22,6 +23,7 @@ const sectionSkills = document.getElementById('section-skills');
 const sectionPortfolio = document.getElementById('section-portfolio');
 const sectionEducation = document.getElementById('section-education');
 const sectionExperiences = document.getElementById('section-experiences');
+const sectionContact = document.getElementById('section-contact');
 
 // Rendering all sections by default
 header.innerHTML = renderHeader();
@@ -30,6 +32,7 @@ sectionSkills.innerHTML = renderSkills();
 sectionPortfolio.innerHTML = renderPortfolio();
 sectionEducation.innerHTML = renderEducation();
 sectionExperiences.innerHTML = renderExperiences();
+sectionContact.innerHTML = renderContact();
 
 /* ------- Event for the header----------- */
 header.addEventListener('click', (e) => {
@@ -133,3 +136,9 @@ sectionExperiences.addEventListener('click', (e) => {
     sectionExperiences.innerHTML = renderExperiences();
   }
 });
+
+// for the homepage
+const paths = document.querySelectorAll('#myName path');
+for (let i = 0; i < paths.length; i++) {
+  console.log(`Letter ${i} is ${paths[i].getTotalLength()}`);
+}

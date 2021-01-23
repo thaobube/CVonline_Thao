@@ -24,9 +24,8 @@ export const sectionTitle = {
     mainTitle: 'contact',
     subTitle: 'Get in touch!',
   },
+  form: {
+    mainTitle: 'drop me a message',
+    subTitle: 'Let\'s Connect!',
+  },
 };
-
-// Data for the navigation
-export const nav = [
-  'about', 'skills', 'portfolio', 'education', 'experience', 'contact',
-];

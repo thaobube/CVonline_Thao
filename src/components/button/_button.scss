@@ -101,3 +101,27 @@
         background: $color-white;
     }
 }
+.btn-downloadF {
+    background: $color-primary;
+    color: $dark-primary;
+    border: 1px solid $color-primary;
+    z-index: 0;
+    &::before, &::after {       
+        background: $dark-primary;
+    }
+    &:hover {
+        color: $color-primary;
+    }
+}
+.btn-downloadUF {
+    background: transparent;
+    color: $color-primary;  
+    border: 1px solid $color-primary;
+    z-index: 0;
+    &::before, &::after {       
+        background: $dark-primary;
+    }
+    &:hover {
+        color: $color-primary;
+    }
+}

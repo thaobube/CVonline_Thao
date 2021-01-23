@@ -1,7 +1,7 @@
-import { sectionTitle } from '../data/data-components';
-import { education } from '../data/data-education';
-import { createSectionTitle } from '../helpers/component-functions';
-import { state } from '../data/state';
+import { sectionTitle } from '../components/section-title/data-section-title';
+import { education } from './data-education';
+import { createSectionTitle } from '../components/section-title/section-title';
+// import { state } from '../base/state';
 
 /* -----------Create the function renderEducation------------ */
 

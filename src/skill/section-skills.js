@@ -1,6 +1,6 @@
-import { sectionTitle } from '../data/data-components';
-import { skills } from '../data/data-skills';
-import { createSectionTitle } from '../helpers/component-functions';
+import { sectionTitle } from '../components/section-title/data-section-title';
+import { skills } from './data-skills';
+import { createSectionTitle } from '../components/section-title/section-title';
 
 /* -----------Create the function renderSkills------------ */
 

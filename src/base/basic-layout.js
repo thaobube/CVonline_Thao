@@ -11,4 +11,6 @@ export const renderApp = () => `
     </section>
     <section id="section-experiences">
     </section>
+    <section id="section-contact">
+    </section>
     `;
