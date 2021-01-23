@@ -20,7 +20,10 @@ export const renderEducation = () => {
       <div class="info">
         <div class="info__title">${education[0].title}</div>
         <div class="info__subtitle">${education[0].subtitle}</div>
-        <div class="info__description">${education[0].description}</div>
+        <div class="info__description">${education[0].description}
+          <div class="info__link"><a href="${education[0].link}">See more about the ${education[0].generalTitle} <i class="fas fa-external-link-alt"></i></a></div>
+        </div>
+
       </div>
     </div>
 `;
@@ -32,7 +35,9 @@ export const renderEducation = () => {
           <div class="info--hidden">
             <div class="info__title">${education[i].title}</div>
             <div class="info__subtitle">${education[i].subtitle}</div>
-            <div class="info__description">${education[i].description}</div>
+            <div class="info__description">${education[i].description}
+              <div class="info__link"><a href="${education[i].link}">See more about the ${education[i].generalTitle} <i class="fas fa-external-link-alt"></i></a></div>
+            </div> 
           </div>
         </div>
     `;

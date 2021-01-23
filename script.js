@@ -124,6 +124,17 @@ sectionEducation.addEventListener('click', (e) => {
     e.target.parentNode.classList.add('info');
   }
 });
+// sectionEducation.addEventListener('mouseover', (e) => {
+//   if (e.target.matches('.info__title')) {
+//     // hide the previous item
+//     const infoVisible = sectionEducation.querySelector('.info');
+//     infoVisible.classList.remove('info');
+//     infoVisible.classList.add('info--hidden');
+//     // display the clicked item
+//     e.target.parentNode.classList.remove('info--hidden');
+//     e.target.parentNode.classList.add('info');
+//   }
+// });
 
 /* ------- Event for the section Experiences----------- */
 sectionExperiences.addEventListener('click', (e) => {

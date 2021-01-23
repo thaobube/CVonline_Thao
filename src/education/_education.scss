@@ -48,7 +48,6 @@
                 border: $grey-primary 3px solid;
             }
             .info, .info--hidden {
-                // border: yellow 1px solid;
                 text-align: left;
                 padding: 5px 0px 5px 8px;
                 // erase 1 part of border of the speech bubble
@@ -84,7 +83,15 @@
                 .info__description {
                     margin-top: 20px;
                     font-weight: 300;
-                    font-size: 0.85rem;                    
+                    font-size: 0.85rem;
+                    position: relative;  
+                    .info__link {
+                        margin-top: 10px;
+                        a {
+                            color: $color-primary;
+                            font-size: 0.85rem;
+                        }
+                    }              
                 }
             }
             .info--hidden {
@@ -115,6 +122,13 @@
                     &::after {                        
                         background: $color-primary;
                     }
+                    .info__description {
+                        .info__link {
+                            a {
+                                color: $color-secondary;
+                            }
+                        }              
+                    }
                 }                    
             }
             &:nth-child(even) {
@@ -130,6 +144,13 @@
                     }
                     &::after {                        
                         background: $color-secondary;
+                    }
+                    .info__description {
+                        .info__link {
+                            a {
+                                color: $color-primary;
+                            }
+                        }              
                     }
                 }                    
             }

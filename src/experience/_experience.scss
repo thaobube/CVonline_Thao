@@ -4,7 +4,7 @@
     margin: 0;
   }
 .carousel {  
-  margin: 80px 0 50px 0;
+  margin: 50px 0 50px 0;
   &__content {    
     display: flex;  
     justify-content: center;
@@ -35,36 +35,29 @@
           transition: all 2s ease;
           display: none;
           width: 280px;
-          height: 400px;
+          height: 500px;
           margin: 10px 0;
           position: relative;
           background-color: $color-white;
           box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.45);
-          &__logo {
-              background-color: $grey-primary;
-              border: 8px $color-white solid;
-              box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.45);
-              width: 130px;
-              height: 130px;
-              border-radius: 50%;
-              padding: 15px 0;
+          &__logo {              
+              background-color: $grey-primary                   ;
+              height: 120px;
               display: flex;
-              align-items: center;
               justify-content: center;
-              position: absolute;
-              left: 50%;
-              top: -15%;
-              transform: translate(-50%, 0);
+              align-items: center;
               img {
-                  width: 80%;
+                  width: 50%;
                   display: block;
+                //   border: 2px greenyellow solid;
+                  margin: 0 auto;
               }
           }
           &__heading {
               text-transform: uppercase;
               font-weight: 700;
-              padding-top: 80px;          
-              color: $color-primary;                    
+              padding-top: 20px;          
+              color: $dark-primary;                    
               margin: 10px 20px;
           }
           &__title, &__description {
@@ -78,7 +71,22 @@
           &__description {
             text-align: left;
             margin: 0px 20px;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
+          }
+          &__link {
+              a {
+                  text-decoration: none;
+                  color: $color-secondary;
+              }
+              position: absolute;
+              left: 50%;
+              bottom: 15%;
+              transform: translate(-50%, 0);
+            //   border: olive 2px solid;
+              width: 100%;
+              text-align: left;
+              margin: 0px 20px;
+              font-size: 0.88rem;
           }
           hr {
             display: inline-block;
