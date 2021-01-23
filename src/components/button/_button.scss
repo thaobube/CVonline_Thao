@@ -97,6 +97,7 @@
 }
 .btn-whiteF {
     background: $color-white;
+    z-index: 0;
     &::before, &::after {       
         background: $color-white;
     }

@@ -1,6 +1,8 @@
 // mobile version
 header {
     background: $dark-primary;
+    background: $color-white;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.45);
     position: fixed;
     top: 0;
     left: 0;
@@ -16,8 +18,8 @@ header {
         .logo {
             font-weight: 800;
             font-size: 1.5rem;
-            border: $color-white 3px solid;
-            color: $color-white;
+            border: $dark-primary 3px solid;
+            color: $dark-primary;
             width: 70px;
             height: 35px;
             display: flex;
@@ -35,7 +37,7 @@ header {
             .bar {
                 height: 5px;
                 width: 100%;
-                background-color: $color-white;
+                background-color: $dark-primary;
                 display: block;
                 border-radius: 5px;
                 transition: 0.3s ease;
@@ -49,7 +51,7 @@ header {
         }
         .open {
             .bar {
-                background-color: $color-white;
+                background-color: $dark-primary;
             }
             #bar1 {
                 transform: translateY(3px) rotateZ(-45deg);
@@ -84,21 +86,21 @@ header {
             a {
                 text-decoration: none;
                 text-transform: uppercase;               
-                color: $color-white;
+                color: $dark-primary;
                 font-size: 1.5rem;
                 font-weight: 300;
                 transition: border-bottom 0.5s;
                 padding: 5px 0;
                 &:hover {
                     font-weight: 700;
-                    border-bottom: 2px solid $color-white;
+                    border-bottom: 2px solid $dark-primary;
                 }
             }
         }        
     }
     .open-nav {
         display: flex;
-        background-color: $dark-primary;
+        background-color: $color-white;
         transition: all 1s ease;
     } 
 }
@@ -129,7 +131,7 @@ header {
                 a {
                     text-decoration: none;
                     text-transform: uppercase;               
-                    color: $color-white;
+                    color: $dark-primary;
                     font-size: 1.1rem;
                 }
             }        

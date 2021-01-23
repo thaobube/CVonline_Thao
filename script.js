@@ -44,6 +44,14 @@ header.addEventListener('click', (e) => {
     // console.log(nav);
     nav.classList.toggle('open-nav');
   }
+  if (e.target.matches('.nav-item')) {
+    // console.log(e.target);
+    const menu = e.target.closest('#menu');
+    const nav = menu.querySelector('.nav');
+    const hamburger = menu.querySelector('.hamburger');
+    nav.classList.remove('open-nav');
+    hamburger.classList.remove('open');
+  }
 });
 
 /* ------- Event for the section About---------- */

@@ -15,7 +15,7 @@ export const renderHeader = () => {
         `;
   for (const item of nav) {
     content += ` 
-            <li><a href="#">${item}</a></li>
+            <li><a class="nav-item" href="#${item}">${item}</a></li>
             `;
   }
   content += ` 
