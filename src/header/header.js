@@ -4,7 +4,7 @@ export const renderHeader = () => {
   let content = `        
     <div id="menu">
         <div class="menu--hamburger">
-            <div class="logo">T-N</div>
+            <div class="logo"><a href="#top">T-N</div>
             <div class="hamburger">
                 <div id="bar1" class="bar"></div>
                 <div id="bar2" class="bar"></div>

@@ -27,6 +27,10 @@ header {
             align-items: center;
             margin-left: 20px;
             z-index: 2;
+            a {
+                text-decoration: none;
+                color: $dark-primary;
+            }
         }
         .hamburger {
             width: 35px;
@@ -50,11 +54,13 @@ header {
             }
         }
         .open {
+            position: relative;
             .bar {
                 background-color: $dark-primary;
             }
             #bar1 {
                 transform: translateY(3px) rotateZ(-45deg);
+                // z-index: 3;
             }
             #bar3{
                 transform: translateY(-6px) rotateZ(45deg);

@@ -1,6 +1,7 @@
 import './styles.scss';
 import { renderApp } from './src/base/basic-layout';
 import { renderHeader } from './src/header/header';
+import { renderHome } from './src/home/section-home';
 import { renderAbout } from './src/about/section-about';
 import { renderSkills, eventSkills } from './src/skill/section-skills';
 import { renderPortfolio } from './src/portfolio/section-portfolio';
@@ -18,6 +19,7 @@ app.innerHTML = renderApp();
 
 // Get all elements
 const header = document.querySelector('header');
+const sectionHome = document.getElementById('section-home');
 const sectionAbout = document.getElementById('section-about');
 const sectionSkills = document.getElementById('section-skills');
 const sectionPortfolio = document.getElementById('section-portfolio');
@@ -27,6 +29,7 @@ const sectionContact = document.getElementById('section-contact');
 
 // Rendering all sections by default
 header.innerHTML = renderHeader();
+sectionHome.innerHTML = renderHome();
 sectionAbout.innerHTML = renderAbout();
 sectionSkills.innerHTML = renderSkills();
 sectionPortfolio.innerHTML = renderPortfolio();
@@ -37,6 +40,7 @@ sectionContact.innerHTML = renderContact();
 /* ------- Event for the header----------- */
 header.addEventListener('click', (e) => {
   if (e.target.matches('.bar')) {
+    e.preventDefault();
     e.target.parentNode.classList.toggle('open');
     const menu = e.target.closest('#menu');
     // console.log(menu);
@@ -45,7 +49,6 @@ header.addEventListener('click', (e) => {
     nav.classList.toggle('open-nav');
   }
   if (e.target.matches('.nav-item')) {
-    // console.log(e.target);
     const menu = e.target.closest('#menu');
     const nav = menu.querySelector('.nav');
     const hamburger = menu.querySelector('.hamburger');
@@ -156,8 +159,8 @@ sectionExperiences.addEventListener('click', (e) => {
   }
 });
 
-// for the homepage
+// for the homepage - SVG
 const paths = document.querySelectorAll('#myName path');
 for (let i = 0; i < paths.length; i++) {
-  console.log(`Letter ${i} is ${paths[i].getTotalLength()}`);
+  console.log(`Letter ${i + 1} is ${paths[i].getTotalLength()}`);
 }
