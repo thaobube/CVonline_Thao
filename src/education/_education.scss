@@ -2,7 +2,7 @@
 #section-education {
     padding: 100px 0 80px 0; 
     // notes: url of '_education.scss' will be imported to 'styles.scss' => the path will be based on the 'styles.scss'
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url('./static/images/education.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95) ), url('./static/images/education.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -10,6 +10,9 @@
 }
 
 .timeline {
+    margin-top: 30px;
+    font-family: Avenir LT;
+    font-size: 1.05rem;
     transition: all ease-in-out 1s;
     display: flex;
     &__vertical-line {
@@ -32,7 +35,7 @@
                 line-height: 24px;
                 text-align: left;
                 padding-left: 3px;
-                font-size: 0.9rem;
+                font-size: 1rem;
                 position: absolute;
                 left: -113px;
                 top: 5px;
@@ -78,18 +81,19 @@
                 }
                 .info__subtitle {
                     font-weight: 700;
-                    font-size: 0.9rem;
+                    font-size: 1rem;
                 }
                 .info__description {
                     margin-top: 20px;
                     font-weight: 300;
-                    font-size: 0.85rem;
-                    position: relative;  
+                    font-size: 1rem;
+                    position: relative;
+                    color: $grey-darkest;  
                     .info__link {
                         margin-top: 10px;
                         a {
                             color: $color-primary;
-                            font-size: 0.85rem;
+                            font-size: 0.9rem;
                         }
                     }              
                 }
@@ -174,13 +178,13 @@
                 width: 330px;
                 .info, .info--hidden {
                     .info__title {
-                        font-size: 1.2rem;
+                        font-size: 1.3rem;
                     }
                     .info__subtitle {
-                        font-size: 1.1rem;
+                        font-size: 1.2rem;
                     }
                     .info__description {
-                        font-size: 1rem;                    
+                        font-size: 1.2rem;                    
                     }
                 }
                 &:nth-child(even) {
@@ -228,13 +232,13 @@
                 width: 450px;
                 .info, .info--hidden {
                     .info__title {
-                        font-size: 1.25rem;
+                        font-size: 1.5rem;
                     }
                     .info__subtitle {
-                        font-size: 1.15rem;
+                        font-size: 1.35rem;
                     }
                     .info__description {
-                        font-size: 1.1rem;                    
+                        font-size: 1.2rem;                    
                     }
                 }
                 &:nth-child(even) {

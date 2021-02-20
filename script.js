@@ -56,6 +56,35 @@ header.addEventListener('click', (e) => {
     hamburger.classList.remove('open');
   }
 });
+// Change header in white background when scrolling:
+window.addEventListener('scroll', () => {
+  const top = window.scrollY;
+  if (top >= 200) {
+    header.classList.add('unhidden');
+  } else {
+    header.classList.remove('unhidden');
+  }
+});
+// Highlighted sections when scrolling:
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll('.nav li');
+// console.log(navItems);
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLi.forEach((li) => {
+    li.classList.remove('active');
+    if (li.classList.contains(current)) {
+      li.classList.add('active');
+    }
+  });
+});
 
 /* ------- Event for the section About---------- */
 sectionAbout.addEventListener('click', (e) => {

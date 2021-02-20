@@ -1,27 +1,34 @@
 // mobile version
 header {
-    background: $dark-primary;
-    background: $color-white;
-    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.45);
+    // background: $dark-primary;
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
+    font-family: "Lulo Clean";
     width: 100%;    
     z-index: 1;
+    transition: all 0.5s;
+}
+header.unhidden{
+    background: $color-white;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.45);
+    transition: all 0.5s;
 }
 #menu {    
     .menu--hamburger {
         display: flex;
         align-items: center;
         justify-content: space-between;     
-        height: 80px;
+        height: 100px;
         .logo {
-            font-weight: 800;
-            font-size: 1.5rem;
-            border: $dark-primary 3px solid;
-            color: $dark-primary;
-            width: 70px;
-            height: 35px;
+            // background: $dark-primary;
+            // border: $dark-primary 2px solid;
+            padding: 5px 20px;
+            img {
+                // border: $dark-primary 3px solid;
+                width: 40px;
+            }
             display: flex;
             justify-content: center;
             align-items: center;
@@ -41,7 +48,7 @@ header {
             .bar {
                 height: 5px;
                 width: 100%;
-                background-color: $dark-primary;
+                background-color: $color-primary;
                 display: block;
                 border-radius: 5px;
                 transition: 0.3s ease;
@@ -56,7 +63,7 @@ header {
         .open {
             position: relative;
             .bar {
-                background-color: $dark-primary;
+                background-color: $color-primary;
             }
             #bar1 {
                 transform: translateY(3px) rotateZ(-45deg);
@@ -89,20 +96,26 @@ header {
         li {
             list-style: none;
             text-align: right;
+            margin: 0 5px;
             a {
                 text-decoration: none;
                 text-transform: uppercase;               
                 color: $dark-primary;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 font-weight: 300;
                 transition: border-bottom 0.5s;
                 padding: 5px 0;
                 &:hover {
-                    font-weight: 700;
-                    border-bottom: 2px solid $dark-primary;
+                    color: $color-primary;
                 }
             }
-        }        
+        }  
+        li.active {
+            a {
+                color: $color-primary;
+                transition: 0.3 ease color;
+            }
+        }      
     }
     .open-nav {
         display: flex;
@@ -115,6 +128,9 @@ header {
 @media only screen and (min-width: 992px) {
     #menu { 
         .menu--hamburger {
+            .logo {
+                margin-left: 50px;
+            }
             .hamburger {
                 display: none;
             }
@@ -128,7 +144,7 @@ header {
             position: absolute;
             left: 25%;
             right: 0;
-            width: 70%;height: 80px;
+            width: 70%;height: 100px;
             transition: all 0.3s ease-in-out;
             padding-top: 0;
             li {
@@ -137,8 +153,8 @@ header {
                 a {
                     text-decoration: none;
                     text-transform: uppercase;               
-                    color: $dark-primary;
-                    font-size: 1.1rem;
+                    color: $dark-primary;   
+                    font-size: 0.9rem;
                 }
             }        
         }

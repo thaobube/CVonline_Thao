@@ -19,9 +19,7 @@ export const renderExperiences = () => {
   for (let i = state.currentFirstIndex; i < experiences.length; i++) {
     content += `
         <div class="slide">
-          <div class="slide__logo">
-          <img src="./images/${experiences[i].logo}" alt="logo">            
-          </div>
+
           <div class="slide__heading">${experiences[i].company}</div>
           <div class="slide__title">${experiences[i].role}</div>
           <div class="slide__description">${experiences[i].description}</div>

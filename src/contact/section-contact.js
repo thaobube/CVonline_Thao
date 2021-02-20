@@ -18,22 +18,9 @@ export const renderContact = () => {
               <a href="https://www.linkedin.com/in/thaongtp/"><i class="fab fa-linkedin"></i></a>
               <a href="https://github.com/thaobube"><i class="fab fa-github"></i></a>            
             </div>
-        </div>
-        <div class="contact-form">
-            <img class="contact-img" src="images/contact.jpg" alt="" />
-            <div class="contact-overlay"></div>
-            <form class="form" action="" method="post">
-              <label for="name">Your Name:</label>
-              <input type="text" id="name name="name">
-              <label for="email">Your Email:</label>
-              <input type="email" id="email name="email">
-              <label for="subject">Subject:</label>
-              <input type="text" id="subject name="subject">
-              <label for="message">Message:</label>
-              <textarea name="message"></textarea><br>
-              <input type="submit" value="SEND MESSAGE">
-            </form>
-        </div>
+            </div>
+            <div class="copyright">&copy; 2021 by Thao Nguyen.<br />With Vanilla JavaScript, HTML & CSS.</div>
+      </div>
       `;
   return content;
 };

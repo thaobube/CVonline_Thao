@@ -4,15 +4,16 @@
 
 // For the btn: &::before, &::after =>  background: using the background of the container
 .btn {
+    font-family: "Avenir LT";
+    font-size: 1rem;
     position: relative;
     display: inline-block;
     border: 1px solid $dark-primary;
     color: $dark-primary;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 3px 20px;
+    padding: 10px 20px;
     // font-weight: 700;
-    font-size: 1rem;
     margin: 5px;
     &::before {
         content: '';
@@ -124,5 +125,18 @@
     }
     &:hover {
         color: $color-primary;
+    }
+}
+
+// Medium: ≥768px
+@media only screen and (min-width: 768px) {
+    .btn {
+        font-size: 1.1rem;
+    }
+}
+// Large: ≥992px
+@media only screen and (min-width: 992px) {
+    .btn {
+        font-size: 1.2rem;
     }
 }

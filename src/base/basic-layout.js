@@ -1,6 +1,6 @@
 // Create the function to render the construction of the basic layout
 export const renderApp = () => `
-    <a name="top"></a>
+    <a name="home"></a>
     <header></header>
     <section id="section-home"></section>
     <a name="about"></a>
@@ -11,7 +11,7 @@ export const renderApp = () => `
     <section id="section-portfolio"></section>
     <a name="education"></a>
     <section id="section-education"></section>
-    <a name="experience"></a>
+    <a name="experiences"></a>
     <section id="section-experiences"></section>
     <a name="contact"></a>
     <section id="section-contact"></section>

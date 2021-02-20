@@ -44,6 +44,9 @@
             .about-me {
                 // display: none;
                 display: block;
+                font-family: "Avenir LT";
+                font-size: 1.2rem;
+                // font-weight: bold;
             }
             .about-code {
                 // display: none;
@@ -59,7 +62,7 @@
         .about {
             &__content {
                 .about-me, .about-code  {
-                    font-size: 1rem;
+                    // font-size: 1rem;
                 }
             }
         }

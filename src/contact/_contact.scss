@@ -5,15 +5,17 @@
     width: 100%;
 }
 .contact-container {
-    display: flex;
-    flex-wrap: wrap;
+    font-family: Avenir LT;
+    font-size: 1.2rem;
+    background: $dark-primary;
     .contact-info {
-        padding: 100px 40px;
-        background: $dark-primary;
+        padding: 100px 0px;
         color: $color-white;
         .contact-desc {
+            padding: 20px;
             margin: 60px 0;
             text-align: left;
+            color: $grey-darkest;
             a {
                 color: $color-primary;
                 font-weight: 700;
@@ -34,81 +36,66 @@
             } 
         }
     }
-    .contact-form {
-        height: 750px;
-        position: relative;
-        .contact-img {
-                height: 750px;
-                width: 100%;
-                object-fit:cover;
-        }
-        .contact-overlay {
-            width: 80%;
-            min-width: 300px;
-            height: 80%;
-            background: rgba(255, 255, 255, 0.6);
-            position: absolute;
-            left: 50%;
-            top: 50%; 
-            transform: translate(-50%, -50%);
-        }
-        .form {
-            position: absolute;
-            width: 78%;
-            min-width: 300px;
-            max-width: 500px;
-            height: 80%;
-            left: 50%;
-            top: 18%; 
-            transform: translate(-50%, 0%);
-            padding: 10px;
-            // border: springgreen 2px solid;
-            label {
-                text-align: left;
-                display: block;
-            }
-            input[type=text], input[type=email], textarea {
-                display: block;
-                width: 100%;
-                padding: 10px;
-                margin: 4px 0;
-                border: 1px solid $dark-lighter;
-                border-radius: 4px;
-                background:  transparent;
-                cursor: pointer;
-            }
-            textarea {
-                height: 180px;
-            }
-            input[type=submit]{
-                width: 50%;
-                max-width: 180px;
-                padding: 10px;;
-                background:  $dark-primary;
-                border: none;
-                color: $color-primary;
-                cursor: pointer;
-                font-size: 0.9rem;
-                transition: all 0.2s ease-in-out;
-            }
-            input[type=submit]:hover {
-                background: $color-primary;
-                font-weight: 700;
-                color: $dark-primary;
-            }
-        }
+    .copyright {
+        color: $dark-lighter;
+        font-size: 1.1rem;
+        padding-bottom: 30px;
+    }
 
+}
+// Small: ≥576px
+@media only screen and (min-width: 576px) {
+    .contact-container {
+        font-size: 1.2rem;
+        .contact-info {
+            padding: 100px 0px;
+            .contact-desc {
+                padding: 30px;
+                margin: 60px 0;
+            }
+            .contact-download {
+                margin: 50px 0;
+            }
+            .social-network {
+                .fa-linkedin, .fa-github {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+// Medium: ≥768px
+@media only screen and (min-width: 768px) {
+    .contact-container {
+        font-size: 1.2rem;
+        .contact-info {
+            padding: 100px 0px;
+            .contact-desc {
+                padding: 20px 50px;
+            }
+            .social-network {
+                .fa-linkedin, .fa-github {
+                    font-size: 3.5rem;
+                }
+            }
+        }
     }
 }
 // Large: ≥992px
 @media only screen and (min-width: 992px) {
     .contact-container {
-        flex-wrap:nowrap;
+        font-size: 1.5rem;
         .contact-info {
-            flex-basis: 50%;
-        }
-        .contact-form {
-            flex-basis: 50%;
+            padding: 100px 0px;
+            .contact-desc {
+                padding: 20px 100px;
+            }
+            .social-network {
+                .fa-linkedin, .fa-github {
+                    font-size: 4rem;
+                }
+            }
         }
     }
+
 }

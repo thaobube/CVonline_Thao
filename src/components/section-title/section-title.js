@@ -1,9 +1,7 @@
 // Create title
-export const createSectionTitle = ({ mainTitle, subTitle }) => ` 
+export const createSectionTitle = ({ mainTitle, number }) => ` 
 <div class="section-title">
+    <div class="section-title--number">${number}</div>
     <div class="section-title--main">${mainTitle}</div>
-    <hr class="section-title__hr--above">
-    <hr class="section-title__hr--below">
-    <div class="section-title--sub">${subTitle}</div>
 </div>
 `;
