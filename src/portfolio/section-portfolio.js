@@ -88,9 +88,11 @@ export const renderPortfolio = () => {
     content += `
         <div class="card">
           <div class="card__image">
-            <img src="./images/${state.currentArray[i].img}" alt="logo">            
+            <img src="./images/${state.currentArray[i].img}" alt="logo">
+            <div class="card__image__subtitle">${state.currentArray[i].subtitle}</div>
+            <div class="card__image__title">${state.currentArray[i].title}</div>        
           </div>
-          <div class="card__content">
+          <div class="card__overlay">
             <div class="card__content__title">${state.currentArray[i].title}</div>
             <div class="card__content__description">${state.currentArray[i].description}</div> 
             <div>${createButton('see more', 'filled', 'whiteF')}</div>
