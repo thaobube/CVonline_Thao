@@ -5,7 +5,7 @@
 .home-container {
     width: 100%;
     height: 100vh;
-    background-image: url(./static/images/bg49.jpg);
+    background-image: url(./static/images/bg_small.jpg);
     background-size: cover;
     background-position: center;
     // border: palevioletred 2px solid;
@@ -14,7 +14,7 @@
         width: 100%;
         height: 100vh;
         background: $dark-primary;
-        opacity: 0.65;
+        opacity: 0.60;
         position: absolute;
     }
     .home-animation {      
@@ -141,7 +141,7 @@
 // Small: ≥576px
 @media only screen and (min-width: 576px) {
     .home-container {
-        background-image: url(./static/images/bg49.jpg);
+        background-image: url(./static/images/bg_small.jpg);
         .home-animation {      
             .animate-text 
             {
@@ -171,7 +171,7 @@
 // Medium: ≥768px
 @media only screen and (min-width: 768px) {
     .home-container {
-        background-image: url(./static/images/bg49.jpg);
+        background-image: url(./static/images/bg43.jpg);
         .home-animation {      
             .animate-text 
             {

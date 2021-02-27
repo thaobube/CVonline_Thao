@@ -3,13 +3,17 @@
     padding: 120px 0 80px 0;
 }
 .about-container {
-    max-width: 1000px;
-    margin: 20px auto;
+    // max-width: 1000px;
+    margin: 20px auto;    
+    font-family: "Avenir LT";
+    // border: palevioletred solid 2px;
     .profile-photo {
         width: 200px;
         height: 200px;
         position: relative;
         margin: 0 auto;
+        // border: green solid 2px;
+
         .photo-shadow {
             width: 150px;
             height: 150px;
@@ -30,6 +34,8 @@
         }
     }
     .about {
+        // border: yellow solid 2px;
+
         &__option {
             display: flex;
             justify-content: center;
@@ -37,20 +43,42 @@
         }
         &__content {
             text-align: left;
-            .about-me, .about-code  {
+            .about-me, .about-code, .about-subtitle  {
                 margin: 20px 20px 10px 20px;
-                font-size: 0.9rem;
+            }
+            .about-subtitle {
+                font-size: 1.5rem;
+                font-weight: bold;
             }
             .about-me {
                 // display: none;
                 display: block;
-                font-family: "Avenir LT";
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 // font-weight: bold;
             }
             .about-code {
                 // display: none;
                 display: block;
+                // border: yellow solid 2px;
+                font-size: 1.1rem;
+                .reason-item {
+                    margin: 20px 0;
+                    .reason-subtitle {
+                        font-weight: bold;
+                    }
+                }
+                .read-more, .read-less {
+                    font-style: italic;
+                    cursor: pointer;
+                }
+                .shortDisplay {
+                    display: none;
+                    display: block;
+                }
+                .fullDisplay {
+                    display: none;
+                    // display: block;
+                }
             }
         }
     }
@@ -61,8 +89,11 @@
         width: 80%;
         .about {
             &__content {
-                .about-me, .about-code  {
-                    // font-size: 1rem;
+                .about-me {
+                    font-size: 1.2rem;
+                }
+                .about-code {
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -74,10 +105,10 @@
 @media only screen and (min-width: 992px) {
     .about-container {    
         display: flex;
-        max-width: 1000px;
+        // max-width: 1000px;
         margin: 80px auto;
         .profile-photo {
-            width: 35vw;
+            width: 30%px;
             .photo-shadow {
                 width: 15vw;
                 max-width: 210px;
@@ -87,7 +118,7 @@
                 border-radius: 50%;
                 position: absolute;
                 z-index: -1;
-                top: 17%;
+                top: 37%;
                 left: 0%;
             }
             img {
@@ -96,11 +127,12 @@
                 border-radius: 50%;
                 position: absolute;
                 z-index: 0;
-                top: 10%;
+                top: 30%;
                 left: 5%;
             }
         }
         .about {
+            width: 70%;
             &__option {
                 display: flex;
                 justify-content: start;
@@ -108,16 +140,18 @@
             }
             &__content {
                 text-align: left;
-                .about-me, .about-code  {
-                    margin: 40px 20px 10px 20px;
+                .about-me, .about-code, .about-subtitle  {
+                    margin: 20px 20px 10px 20px;
                 }
                 .about-me {
-                    // display: none;
-                    display: block;
+                    font-size: 1.25rem;
                 }
                 .about-code {
-                    // display: none;
-                    display: block;
+                    font-size: 1.25rem;
+                }
+                .about-subtitle {
+                    font-weight: bold;
+                    font-size: 1.7rem;
                 }
             }
         }

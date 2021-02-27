@@ -98,6 +98,20 @@ sectionAbout.addEventListener('click', (e) => {
     state.aboutMeButton = false;
     sectionAbout.innerHTML = renderAbout();
   }
+  if (e.target.matches('.read-more')) {
+    // e.preventDefault();
+    const shortDisplay = e.target.parentNode;
+    shortDisplay.style.display = 'none';
+    const fullDisplay = shortDisplay.parentNode.querySelector('.fullDisplay');
+    fullDisplay.style.display = 'block';
+  }
+  if (e.target.matches('.read-less')) {
+    // e.preventDefault();
+    const fullDisplay = e.target.parentNode;
+    fullDisplay.style.display = 'none';
+    const shortDisplay = fullDisplay.parentNode.querySelector('.shortDisplay');
+    shortDisplay.style.display = 'block';
+  }
 });
 
 /* ------- Event for the section Skills----------- */
@@ -142,6 +156,12 @@ sectionPortfolio.addEventListener('click', (e) => {
     state.currentPortfolioButton = 'other';
     sectionPortfolio.innerHTML = renderPortfolio();
   }
+  // if (e.target.matches('.btn-other')) {
+  //   e.preventDefault();
+  //   state.currentArray = portfolioOther;
+  //   state.currentPortfolioButton = 'other';
+  //   sectionPortfolio.innerHTML = renderPortfolio();
+  // }
 });
 
 /* ------- Event for the section Education----------- */

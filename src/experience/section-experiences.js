@@ -23,7 +23,7 @@ export const renderExperiences = () => {
           <div class="slide__heading">${experiences[i].company}</div>
           <div class="slide__title">${experiences[i].role}</div>
           <div class="slide__description">${experiences[i].description}</div>
-          <div class="slide__link"><a href="${experiences[i].link}">Learn more about ${experiences[i].acronym} <i class="fas fa-external-link-alt"></i></a></div> 
+          <div class="slide__link"><a href="${experiences[i].link}" target="_blank">Learn more about ${experiences[i].acronym} <i class="fas fa-external-link-alt"></i></a></div> 
           <hr>       
           <div class="slide__duration">${experiences[i].duration}</div>
         </div>

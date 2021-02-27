@@ -11,7 +11,7 @@ export const skills = [
     title: 'Backend',
     icon: '<i class="fas fa-code"></i>',
     description: 'Click below to find more info.',
-    contentClick: ['C# - Asp.NET', 'Javascript - NodeJS', 'PHP5 - Symfony3', 'Python'],
+    contentClick: ['C# - Asp.NET', 'Javascript - NodeJS', 'PHP - Symfony', 'Python'],
   },
   {
     heading: 'Da',

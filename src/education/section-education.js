@@ -21,7 +21,7 @@ export const renderEducation = () => {
         <div class="info__title">${education[0].title}</div>
         <div class="info__subtitle">${education[0].subtitle}</div>
         <div class="info__description">${education[0].description}
-          <div class="info__link"><a href="${education[0].link}">See more about the ${education[0].generalTitle} <i class="fas fa-external-link-alt"></i></a></div>
+          <div class="info__link"><a href="${education[0].link}" target="_blank">See more about the ${education[0].generalTitle} <i class="fas fa-external-link-alt"></i></a></div>
         </div>
 
       </div>
