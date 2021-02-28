@@ -36,10 +36,41 @@
             } 
         }
     }
-    .copyright {
-        color: $dark-lighter;
-        font-size: 1.1rem;
-        padding-bottom: 30px;
+    .footer {
+        hr {
+            display: inline-block;
+            width: 90%;
+            height: 1px;
+            border: none;
+            border-top: 1px solid $dark-lighter;
+            padding-bottom: 10px;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            justify-content: space-around;
+            // border: palegoldenrod solid 1px;
+            padding-bottom: 30px;
+            .copyright {
+                color: $dark-lighter;
+                font-size: 1.1rem;
+                // border: red solid 1px;
+                margin: 0 5%;
+                text-align: center;
+            }
+            .fun-hobbies {
+                // border: red solid 1px;
+                color: $dark-lighter;
+                font-size: 1.1rem;
+                margin: 0 5%;
+                font-weight: bold;
+                .fa-youtube, .fa-instagram {
+                    color: $dark-lighter;
+                    font-size: 2rem;
+                }
+            }
+        }
     }
 
 }
@@ -76,6 +107,14 @@
             .social-network {
                 .fa-linkedin, .fa-github {
                     font-size: 3.5rem;
+                }
+            }
+        }
+        .footer {
+            .footer-container {
+                justify-content: space-between;
+                .copyright {
+                    text-align: left;
                 }
             }
         }

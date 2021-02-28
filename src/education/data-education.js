@@ -20,7 +20,7 @@ export const education = [
     title: 'Université libre de Bruxelles (ULB) - belgium',
     generalTitle: 'University',
     subtitle: 'Advanced Master in Public Health Methodology ',
-    description: 'Certificates:  GPA: 17.25/20 (with the Greatest Distinction).<br>Rank 1st on the graduation of “Advanced Master in Public Health Methodology” (2014 – 2015)',
+    description: 'Certificates:  GPA: 17.25/20 (with Greatest Distinction).<br>Rank 1st on the graduation of “Advanced Master in Public Health Methodology” (2014 – 2015)',
     link: 'https://www.ulb.be/en',
   },
   {
@@ -28,7 +28,7 @@ export const education = [
     title: 'Ghent University  – Belgium',
     generalTitle: 'University',
     subtitle: 'Master of Science in Human Nutrition - Bioscience Engineering Faculty',
-    description: 'Certificates:  GPA: 14.2/20 (with the Distinction)',
+    description: 'Certificates:  GPA: 14.2/20 (with Distinction)',
     link: 'https://www.ugent.be/en',
   },
   {
@@ -36,7 +36,7 @@ export const education = [
     title: 'Hanoi University of Science and Technology – Vietnam',
     generalTitle: 'University',
     subtitle: 'Bachelor Diploma in Food Technology',
-    description: 'Certificates:  GPA: 8.2/10 ((with the Great Distinction)<br>Rank 1st on the graduation of Department of Tropical Food and Quality Management.',
+    description: 'Certificates:  GPA: 8.2/10 ((with Great Distinction)<br>Rank 1st on the graduation of Department of Tropical Food and Quality Management.',
     link: 'https://en.hust.edu.vn/',
   },
 ];

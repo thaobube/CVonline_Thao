@@ -36,7 +36,7 @@ export const renderEducation = () => {
             <div class="info__title">${education[i].title}</div>
             <div class="info__subtitle">${education[i].subtitle}</div>
             <div class="info__description">${education[i].description}
-              <div class="info__link"><a href="${education[i].link}">See more about the ${education[i].generalTitle} <i class="fas fa-external-link-alt"></i></a></div>
+              <div class="info__link"><a href="${education[i].link}" target="_blank">See more about the ${education[i].generalTitle} <i class="fas fa-external-link-alt"></i></a></div>
             </div> 
           </div>
         </div>

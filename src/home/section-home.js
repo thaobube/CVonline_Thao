@@ -1,4 +1,4 @@
-import { createLinkedButton } from '../components/button/button';
+import { createLinkedButton, createLinkedButtonW } from '../components/button/button';
 
 export const renderHome = () => `
 <div class="home-container">
@@ -16,14 +16,10 @@ export const renderHome = () => `
         </p>
     </div>
     <div class="home-buttons">
-        ${createLinkedButton('#portfolio', 'VIEW PORTFOLIO', 'filled', 'downloadUF', 'btn-asp')}
+        ${createLinkedButtonW('#portfolio', 'VIEW PORTFOLIO', 'filled', 'downloadUF', 'btn-asp')}
+        ${createLinkedButton('./CV/CV_ThaoNguyen_EN.pdf', 'download cv', 'filled', 'downloadF', 'btn-fr')}   
     </div>
     <p class="home-message">I’m looking for a 6 - 8 week internship starting in May 2021.</p>
     </div>
 <div class="fixedButton"><a href="#home"><i class="fas fa-chevron-up"></i></a></div>
 `;
-//
-{ /* <div class="home-buttons">
-${createLinkedButton('#portfolio', 'VIEW PORTFOLIO', 'filled', 'whiteF', 'btn-asp')}
-${createLinkedButton('#contact', 'CONTACT ME', 'filled', 'darkF', 'btn-all')}
-</div> */ }
