@@ -24,7 +24,7 @@ export const renderContact = () => {
             <div class="footer-container">
               <div class="copyright">&copy; 2021 by Thao Nguyen.<br />With Vanilla JavaScript, HTML & SASS.</div>
               <div class="fun-hobbies">
-                My litte fun hobbies:&nbsp;&nbsp; 
+                My little fun hobbies:&nbsp;&nbsp; 
                 <a href="https://www.youtube.com/user/concut88/featured" target="_blank"><i class="fab fa-youtube"></i></a>
                 &nbsp;&nbsp;
                 <a href="https://www.instagram.com/bubecraft/" target="_blank"><i class="fab fa-instagram"></i></a>

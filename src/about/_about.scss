@@ -70,6 +70,10 @@
                 .read-more, .read-less {
                     font-style: italic;
                     cursor: pointer;
+                    animation: all 0.3s ease-in-out;
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
                 .shortDisplay {
                     display: none;

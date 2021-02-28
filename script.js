@@ -119,6 +119,7 @@ sectionAbout.addEventListener('click', (e) => {
 eventSkills(sectionSkills);
 
 /* ------- Event for the section Portfolio---------- */
+// Event for displaying projects according to specific button
 sectionPortfolio.addEventListener('click', (e) => {
   if (e.target.matches('.btn-all')) {
     e.preventDefault();
@@ -131,37 +132,77 @@ sectionPortfolio.addEventListener('click', (e) => {
     state.currentArray = portfolioAsp;
     state.currentPortfolioButton = 'asp';
     sectionPortfolio.innerHTML = renderPortfolio();
+    const fullDisplay = sectionPortfolio.querySelector('.fullDisplay');
+    fullDisplay.style.display = 'block';
   }
   if (e.target.matches('.btn-js')) {
     e.preventDefault();
     state.currentArray = portfolioJs;
     state.currentPortfolioButton = 'js';
     sectionPortfolio.innerHTML = renderPortfolio();
+    const fullDisplay = sectionPortfolio.querySelector('.fullDisplay');
+    fullDisplay.style.display = 'block';
   }
   if (e.target.matches('.btn-php')) {
     e.preventDefault();
     state.currentArray = portfolioPhp;
     state.currentPortfolioButton = 'php';
     sectionPortfolio.innerHTML = renderPortfolio();
+    const fullDisplay = sectionPortfolio.querySelector('.fullDisplay');
+    fullDisplay.style.display = 'block';
   }
   if (e.target.matches('.btn-mobile')) {
     e.preventDefault();
     state.currentArray = portfolioMobile;
     state.currentPortfolioButton = 'mobile';
     sectionPortfolio.innerHTML = renderPortfolio();
+    const fullDisplay = sectionPortfolio.querySelector('.fullDisplay');
+    fullDisplay.style.display = 'block';
   }
   if (e.target.matches('.btn-other')) {
     e.preventDefault();
     state.currentArray = portfolioOther;
     state.currentPortfolioButton = 'other';
     sectionPortfolio.innerHTML = renderPortfolio();
+    const fullDisplay = sectionPortfolio.querySelector('.fullDisplay');
+    fullDisplay.style.display = 'block';
   }
-  // if (e.target.matches('.btn-other')) {
-  //   e.preventDefault();
-  //   state.currentArray = portfolioOther;
-  //   state.currentPortfolioButton = 'other';
-  //   sectionPortfolio.innerHTML = renderPortfolio();
-  // }
+});
+// Event for seeing more/less projects
+sectionPortfolio.addEventListener('click', (e) => {
+  if (e.target.matches('.see-more')) {
+    // e.preventDefault();
+    const partialDisplay = e.target.parentNode;
+    partialDisplay.style.display = 'none';
+    const fullDisplay = partialDisplay.parentNode.querySelector('.fullDisplay');
+    fullDisplay.style.display = 'block';
+  }
+  if (e.target.matches('.see-less')) {
+    // e.preventDefault();
+    const fullDisplay = e.target.parentNode;
+    fullDisplay.style.display = 'none';
+    const partialDisplay = fullDisplay.parentNode.querySelector('.partialDisplay');
+    partialDisplay.style.display = 'block';
+  }
+});
+// Event for showing/hiding Modal
+sectionPortfolio.addEventListener('click', (e) => {
+  // Show Modal
+  if (e.target.matches('.seeMore')) {
+    // e.preventDefault();
+    const targetCard = e.target.closest('.card');
+    const targetModal = targetCard.querySelector('.card__modal--hidden');
+    targetModal.classList.remove('card__modal--hidden');
+    targetModal.classList.add('card__modal');
+  }
+  // Hide Modal
+  if (e.target.matches('.fa-times-circle')) {
+    e.preventDefault();
+    const targetCard = e.target.closest('.card');
+    const targetModal = targetCard.querySelector('.card__modal');
+    targetModal.classList.remove('card__modal');
+    targetModal.classList.add('card__modal--hidden');
+  }
 });
 
 /* ------- Event for the section Education----------- */
@@ -207,9 +248,3 @@ sectionExperiences.addEventListener('click', (e) => {
     sectionExperiences.innerHTML = renderExperiences();
   }
 });
-
-// for the homepage - SVG
-const paths = document.querySelectorAll('#myName path');
-for (let i = 0; i < paths.length; i++) {
-  console.log(`Letter ${i + 1} is ${paths[i].getTotalLength()}`);
-}
