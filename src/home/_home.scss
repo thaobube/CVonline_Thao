@@ -5,7 +5,7 @@
 .home-container {
     width: 100%;
     height: 100vh;
-    background-image: url(./static/images/bg_small.jpg);
+    background-image: url(./static/images/bg_s.jpg);
     background-size: cover;
     background-position: center;
     // border: palevioletred 2px solid;
@@ -17,13 +17,14 @@
         opacity: 0.60;
         position: absolute;
     }
-    .home-animation {      
+    .home-animation { 
+        overflow: hidden;      
         .animate-text 
         {
             // border: red 2px solid;
             position: absolute;
             left: 50%;
-            top: 40%;
+            top: 35%;
             transform: translate(-50%, 0%);
             width: 95%;
             margin: 0;
@@ -32,25 +33,26 @@
                 font-size: 1rem;
                 color: $color-primary;
                 margin: 0;
-                padding: 0;                               
+                padding: 0;         
+
             }
             .name-text, .title-text {
                 font-size: 2.2rem;
-                color: $color-white;                    
-            }             
+                color: $color-white;    
+            }    
+                    
         }
         .home-name {
             position: absolute;
-            animation: nameIn 7s infinite;
+            animation: nameIn 8s infinite;
             width: 80%;
         }
         .home-title {
             position: absolute;
-            animation: titleIn 7s infinite;
+            animation: titleIn 8s infinite;
         }
     }
     .home-buttons { 
-        font-family: "Open Sans"; 
         position: absolute;
         left: 50%;
         bottom: 20%;
@@ -62,7 +64,7 @@
         color: $grey-darker;
         position: absolute;
         left: 50%;
-        bottom: 3%;
+        bottom: 7%;
         transform: translate(-50%, 0%);
         // border: red 2px solid;
 
@@ -72,52 +74,64 @@
 @keyframes nameIn {
     0%{
         opacity: 0;
-        transform: translate(-40%, 0%);
+        // transform: translate(-40%, 0%);
+        transform: translate(-50%, -20%);
     }
     2%{
         opacity: 1;
-        transform: translate(-40%, 0%);
+        // transform: translate(-40%, 0%);
+        transform: translate(-50%, -20%);
     }
     10% {
         opacity: 1;
+        // transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
     }
-    49% {
+    45% {
         opacity: 1;
+        // transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
     }
     50% {
         opacity: 0;
+        // transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
     }
     100% {
         opacity: 0;
+        // transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
     }
 }
 @keyframes titleIn {
     0%{
         opacity: 0;
-        transform: translate(-40%, 0%);
+        // transform: translate(-40%, 0%);
+        transform: translate(-50%, -20%);
     }
     50% {
         opacity: 0;
-        transform: translate(-40%, 0%);
+        // transform: translate(-40%, 0%);
+        transform: translate(-50%, -20%);
     }
     52% {
         opacity: 1;
-        transform: translate(-40%, 0%);
+        // transform: translate(-40%, 0%);
+        transform: translate(-50%, -20%);
     }
     60% {
         opacity: 1;
+        // transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
     }
-    99% {
+    95% {
         opacity: 1;
+        // transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
     }
     100% {
         opacity: 0;
+        // transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
     }
 }
@@ -141,7 +155,7 @@
 // Small: ≥576px
 @media only screen and (min-width: 576px) {
     .home-container {
-        background-image: url(./static/images/bg_small.jpg);
+        background-image: url(./static/images/bg_s.jpg);
         .home-animation {      
             .animate-text 
             {
@@ -158,7 +172,7 @@
             }
         }
         .home-buttons { 
-            font-family: "Open Sans";  
+            font-family: "Avenir LT";  
             bottom: 18%;     
 
         } 
@@ -171,7 +185,7 @@
 // Medium: ≥768px
 @media only screen and (min-width: 768px) {
     .home-container {
-        background-image: url(./static/images/bg43.jpg);
+        background-image: url(./static/images/bg_l.jpg);
         .home-animation {      
             .animate-text 
             {
@@ -188,7 +202,7 @@
             }
         }
         .home-buttons { 
-            font-family: "Open Sans";  
+            font-family: "Avenir LT";  
             bottom: 25%;     
 
         } 
@@ -202,7 +216,7 @@
 // Large screen: ≥992px
 @media only screen and (min-width: 992px) {
     .home-container {
-        background-image: url(./static/images/bg43.jpg);
+        background-image: url(./static/images/bg_l.jpg);
         .home-animation {      
             .animate-text 
             {
@@ -219,7 +233,7 @@
             }
         }
         .home-buttons { 
-            font-family: "Open Sans"; 
+            font-family: "Avenir LT"; 
             bottom: 30%;     
         } 
         .home-message {
@@ -232,7 +246,7 @@
 // Extra Large screen: ≥1200px
 @media only screen and (min-width: 1200px) {
     .home-container {
-        background-image: url(./static/images/bg43.jpg);
+        background-image: url(./static/images/bg_l.jpg);
         .home-animation {      
             .animate-text 
             {
@@ -249,7 +263,7 @@
             }
         }
         .home-buttons { 
-            font-family: "Open Sans"; 
+            font-family: "Avenir LT"; 
             bottom: 30%;     
         } 
         .home-message {
