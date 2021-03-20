@@ -207,7 +207,9 @@ sectionPortfolio.addEventListener('click', (e) => {
     targetModal.classList.remove('card__modal');
     targetModal.classList.add('card__modal--hidden');
     const targetVideo = targetCard.querySelector('video');
-    targetVideo.pause();
+    if (targetVideo !== null) {
+      targetVideo.pause();
+    }
   }
 });
 

@@ -165,6 +165,17 @@
         color: $dark-primary;
     }
 }
+.btn-homeUF{
+    padding: 10px;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+}
+.btn-homeF{
+    padding: 10px;
+    background: $color-primary;
+    border: 1px solid $color-primary;
+}
+
 // Medium: ≥768px
 @media only screen and (min-width: 768px) {
     .btn {

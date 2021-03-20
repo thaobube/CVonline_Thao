@@ -57,9 +57,7 @@ const partialContent = (n) => {
   }
   return content;
 };
-{ /* <div class="modal-video">
-<iframe width="1000" height="615" src="https://www.youtube.com/embed/KO77LfQ1DdM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> */ }
+
 export const renderPortfolio = () => {
   let content = `
   ${createSectionTitle(sectionTitle.portfolio)}

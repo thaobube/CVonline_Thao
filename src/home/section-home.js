@@ -1,5 +1,3 @@
-import { createLinkedButton, createLinkedButtonW } from '../components/button/button';
-
 export const renderHome = () => `
 <div class="home-container">
     <div class="home-overlay"></div>
@@ -16,10 +14,10 @@ export const renderHome = () => `
         </p>
     </div>
     <div class="home-buttons">
-        ${createLinkedButtonW('#portfolio', 'VIEW PORTFOLIO', 'filled', 'downloadUF', 'btn-asp')}
-        ${createLinkedButton('./CV/CV_ThaoNguyen_EN.pdf', 'download cv', 'filled', 'downloadF', 'btn-fr')}   
+        <a href="#portfolio" class="btn btn-homeUF"><span>VIEW PORTFOLIO</span></a>
+        <a href="./CV/CV_ThaoNguyen-EN.pdf" target="_blank" class="btn btn-homeF"><span>DOWNLOAD CV</span></a>
     </div>
-    <p class="home-message">I’m looking for a 6 - 8 week internship starting in May 2021.</p>
+    <p class="home-message">I’m looking for a 6 - 8 week internship starting on 24 May 2021.</p>
     </div>
 <div class="fixedButton"><a href="#home"><i class="fas fa-chevron-up"></i></a></div>
 `;
