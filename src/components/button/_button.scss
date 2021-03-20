@@ -139,6 +139,32 @@
     }
 }
 
+.btn-modalF {
+    background: $dark-primary;
+    color: $color-white;
+    border: 1px solid $dark-primary;
+    z-index: 0;
+    padding: 10px;
+    &::before, &::after {       
+        background: $grey-darker;
+    }
+    &:hover {
+        color: $dark-primary;
+    }
+}
+.btn-modalUF {
+    background: transparent;
+    color: $dark-primary;  
+    border: 1px solid $dark-primary;
+    z-index: 0;
+    padding: 10px;
+    &::before, &::after {       
+        background: $grey-darker;
+    }
+    &:hover {
+        color: $dark-primary;
+    }
+}
 // Medium: ≥768px
 @media only screen and (min-width: 768px) {
     .btn {

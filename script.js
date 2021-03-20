@@ -185,7 +185,7 @@ sectionPortfolio.addEventListener('click', (e) => {
     partialDisplay.style.display = 'block';
   }
 });
-// Event for showing/hiding Modal
+// Event for showing/hiding Modal + play/pause video
 sectionPortfolio.addEventListener('click', (e) => {
   // Show Modal
   if (e.target.matches('.seeMore')) {
@@ -194,6 +194,10 @@ sectionPortfolio.addEventListener('click', (e) => {
     const targetModal = targetCard.querySelector('.card__modal--hidden');
     targetModal.classList.remove('card__modal--hidden');
     targetModal.classList.add('card__modal');
+    const targetVideo = targetCard.querySelector('video');
+    if (targetVideo !== null) {
+      targetVideo.play();
+    }
   }
   // Hide Modal
   if (e.target.matches('.fa-times-circle')) {
@@ -202,6 +206,8 @@ sectionPortfolio.addEventListener('click', (e) => {
     const targetModal = targetCard.querySelector('.card__modal');
     targetModal.classList.remove('card__modal');
     targetModal.classList.add('card__modal--hidden');
+    const targetVideo = targetCard.querySelector('video');
+    targetVideo.pause();
   }
 });
 

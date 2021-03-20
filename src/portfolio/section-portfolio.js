@@ -9,11 +9,7 @@ const partialContent = (n) => {
     content += `
       <div class="card">
         <div class="card__image">
-          <img src="./images/${state.currentArray[i].img}" alt="logo">
-          <div class="card__image-info">
-            <div class="card__image-subtitle">${state.currentArray[i].subtitle}</div>
-            <div class="card__image-title">${state.currentArray[i].title}</div>        
-          </div>
+          <img src="./images/${state.currentArray[i].img}" alt="logo">          
         </div>
         <div class="card__overlay">
           <div class="card__overlay-info">
@@ -26,11 +22,37 @@ const partialContent = (n) => {
         <div class="card__modal--hidden">
           <div class="closeModal"><i class="far fa-times-circle"></i></div>
           <div class="modal-info">
+            <div class="modal-subtitle">${state.currentArray[i].subtitle}</div>
             <div class="modal-title">${state.currentArray[i].title}</div>
+            <div class="modal-intro">${state.currentArray[i].intro}</div>
             <div class="modal-description">${state.currentArray[i].description}</div>
-          </div>
+            `;
+    if (state.currentArray[i].appLink !== '#') {
+      content += `
+              <a href="${state.currentArray[i].appLink}" target="_blank" class="btn btn-filled btn-modalF"><span>View Live Version</span></a>
+              <a href="${state.currentArray[i].gitLink}" target="_blank" class="btn btn-filled btn-modalUF"><span>View Github</span></a>
+              <br />
+              `;
+    } else {
+      content += `
+              <a href="${state.currentArray[i].gitLink}" target="_blank" class="btn btn-filled btn-modalUF"><span>View Github</span></a>
+              <br />
+              `;
+    }
+    if (state.currentArray[i].video !== '#') {
+      content += ` 
+          <div class="modal-video">
+            <video controls muted>
+              <source src="./videos/${state.currentArray[i].video}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>   
+`;
+    }
+    content += `
         </div>
-      </div>    
+      </div>
+    </div> 
 `;
   }
   return content;
@@ -41,6 +63,9 @@ const partialContent = (n) => {
 export const renderPortfolio = () => {
   let content = `
   ${createSectionTitle(sectionTitle.portfolio)}
+  <div class="intro-portfolio">
+  Over the past year or so, I have taken my first steps towards becoming a web app developer. From simple first exercises with HTML and CSS, to small projects with Javascript and React, from the basic concepts of object-oriented programming with C # and PHP to projects with ASP.NET MVC and Symfony framework. I really want to save those first steps as a diary of my journey through projects that I have worked on. The current list of projects is still incomplete. I will continuously update the projects in the near future. 
+  </div>
   <div class="filters">`;
   switch (state.currentPortfolioButton) {
     case 'all':

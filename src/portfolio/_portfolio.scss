@@ -3,6 +3,13 @@
     padding: 100px 0;
     font-family: "Avenir LT"; 
 }
+.intro-portfolio {
+    width: 88%;
+    margin: auto;
+    margin-top: 20px;    
+    font-size: 1.3rem;
+    text-align: left;
+}
 .filters {
     margin: 50px 0;
 }
@@ -128,10 +135,15 @@
                    .modal-description {
                        font-size: 1.5rem;
                    }
-               }
-               .modal-video {
-                   width: 1000px;
-                   border: sandybrown 2px solid;
+                   .modal-video {
+                        margin: 0 auto;
+                        width: 70%;
+                        video {
+                            width: 100%;
+                            height: auto;
+                            border: none;
+                        } 
+                   }
                }
            }
        }
