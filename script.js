@@ -171,14 +171,14 @@ sectionPortfolio.addEventListener('click', (e) => {
 // Event for seeing more/less projects
 sectionPortfolio.addEventListener('click', (e) => {
   if (e.target.matches('.see-more')) {
-    // e.preventDefault();
+    e.preventDefault();
     const partialDisplay = e.target.parentNode;
     partialDisplay.style.display = 'none';
     const fullDisplay = partialDisplay.parentNode.querySelector('.fullDisplay');
     fullDisplay.style.display = 'block';
   }
   if (e.target.matches('.see-less')) {
-    // e.preventDefault();
+    e.preventDefault();
     const fullDisplay = e.target.parentNode;
     fullDisplay.style.display = 'none';
     const partialDisplay = fullDisplay.parentNode.querySelector('.partialDisplay');
