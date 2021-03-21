@@ -31,28 +31,39 @@ const partialContent = (n) => {
       content += `
               <a href="${state.currentArray[i].appLink}" target="_blank" class="btn btn-filled btn-modalF"><span>View Live Version</span></a>
               <a href="${state.currentArray[i].gitLink}" target="_blank" class="btn btn-filled btn-modalUF"><span>View Github</span></a>
-              <br />
-              `;
-    } else {
-      content += `
-              <a href="${state.currentArray[i].gitLink}" target="_blank" class="btn btn-filled btn-modalUF"><span>View Github</span></a>
-              <br />
+              <br /><br />
+            </div> <! --class="modal-info"-->
               `;
     }
+    if (state.currentArray[i].appLink === '#') {
+      if (state.currentArray[i].gitLink !== '#') {
+        content += `
+        <a href="${state.currentArray[i].gitLink}" target="_blank" class="btn btn-filled btn-modalUF"><span>View Github</span></a>
+        <br /><br />
+      </div> <! --class="modal-info"-->
+        `;
+      } else {
+        content += `
+        <br /><br />
+        </div> <! --class="modal-info"-->
+          `;
+      }
+    }
     if (state.currentArray[i].video !== '#') {
-      content += ` 
+      content += `
+        <div class="modal-video-container"> 
           <div class="modal-video">
             <video controls muted>
               <source src="./videos/${state.currentArray[i].video}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>   
+        </div>   
 `;
     }
-    content += `
-        </div>
-      </div>
-    </div> 
+    content += `        
+      </div> <! --class="card__modal--hidden"-->
+    </div> <! --class="card"-->
 `;
   }
   return content;

@@ -7,7 +7,7 @@
     width: 88%;
     margin: auto;
     margin-top: 20px;    
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: left;
 }
 .filters {
@@ -62,7 +62,6 @@
                bottom: 0;
                height: 0;
                opacity: 0;
-            //    background-color: $color-primary;
                background-color: $grey-darker;
                transition: all 0.6s ease;
                .card__overlay-info {
@@ -70,12 +69,14 @@
                 position: absolute;
                 bottom: 12%;
                 left: 8%;
+                right: 5%;
                 color: $color-white;
                     .card__overlay-subtitle{
                         font-style: italic;
                         text-align: left;
-                        color: $dark-lightest;
+                        color: $color-primary;
                         font-size: 1rem;
+                        margin-bottom: 5px;
                     }
                     .card__overlay-title{
                         text-align: left;
@@ -85,8 +86,9 @@
                     .card__overlay-intro{
                         text-align: left;
                         font-weight: 700;
-                        font-size: 1.2rem;
+                        font-size: 1.15rem;
                         color: $dark-lighter;
+
                     }
                     .seeMore {
                         font-style: italic;
@@ -127,24 +129,50 @@
                    cursor: pointer;
                }
                .modal-info {
+                //    border: olive 2px solid;
+                   width: 90%;
+                   margin: 0 auto;
+                   margin-top: 50px;
+                   .modal-subtitle {
+                       color: $color-primary;
+                       font-size: 1.1rem;
+                       text-align: left;
+                       font-style: italic;
+                       margin-bottom: 20px;
+                   }
                    .modal-title {
-                       font-size: 3rem;
+                       font-size:2.5rem;
                        font-weight: bold;
                        color:$color-white;
+                       text-align: left;
+                   }
+                   .modal-intro {
+                       font-size: 1.5rem;
+                       font-weight: bold;
+                       color:$dark-primary;
+                       text-align: left;
+                       margin-bottom: 30px;
                    }
                    .modal-description {
-                       font-size: 1.5rem;
+                       font-size: 1.1rem;
+                       text-align: left;
+                       margin-bottom: 30px;
                    }
-                   .modal-video {
-                        margin: 0 auto;
-                        width: 70%;
-                        video {
-                            width: 100%;
-                            height: auto;
-                            border: none;
-                        } 
-                   }
-               }
+                }
+                .modal-video-container{
+                    // border: blue 1px solid;
+                    // background: $grey-darkest;
+                    .modal-video {
+                        // border: orange 1px solid;
+                         margin: 20px auto;
+                         width: 100%;
+                         video {
+                             width: 100%;
+                             height: auto;
+                             border: none;
+                         } 
+                    }
+                }
            }
        }
     }
@@ -174,6 +202,9 @@
 
 // Medium: ≥768px
 @media only screen and (min-width: 768px) {
+    .intro-portfolio {    
+        font-size: 1.2rem;
+    }
     .partialDisplay, .fullDisplay {
         .card-container {
             .card {
@@ -185,16 +216,47 @@
                 &__overlay {
                     .card__overlay-info {
                          .card__overlay-subtitle{
-                             font-size: 1.2rem;
+                             font-size: 1.15rem;
                          }
                          .card__overlay-title{
-                             font-size: 2rem;
+                             font-size: 1.8rem;
                          }
                          .card__overlay-intro{
-                             font-size: 1.7rem;
+                             font-size: 1.45rem;
                          }
                          .seeMore {
-                             font-size: 1.2rem;
+                             font-size: 1.15rem;
+                         }
+                     }
+                }
+                .card__modal {
+                    .modal-info {
+                        width: 80%;
+                        margin-top: 50px;
+                        .modal-subtitle {
+                            font-size: 1.2rem;
+                            margin-bottom: 20px;
+                        }
+                        .modal-title {
+                            font-size: 2.7rem;
+                        }
+                        .modal-intro {
+                            font-size: 1.6rem;
+                            margin-bottom: 30px;
+                        }
+                        .modal-description {
+                            font-size: 1.2rem;
+                            margin-bottom: 30px;
+                        }
+                     }
+                     .modal-video-container{
+                         padding: 30px 0;
+                         .modal-video {
+                              margin: 10px auto;
+                              width: 80%;
+                              video {
+                                  width: 100%;
+                              } 
                          }
                      }
                 }
@@ -202,8 +264,11 @@
         }
     }
 }
-// Large: ≥992px
-@media only screen and (min-width: 992px) {
+// Large: ≥1200px
+@media only screen and (min-width: 1200px) {
+    .intro-portfolio {    
+        font-size: 1.25rem;
+    }
     .partialDisplay, .fullDisplay {
         .card-container {
             .card {
@@ -215,16 +280,47 @@
                 &__overlay {
                     .card__overlay-info {
                          .card__overlay-subtitle{
-                             font-size: 1.2rem;
+                             font-size: 1.25rem;
                          }
                          .card__overlay-title{
-                             font-size: 2rem;
+                             font-size: 2.1rem;
                          }
                          .card__overlay-intro{
-                             font-size: 1.7rem;
+                             font-size: 1.45rem;
                          }
                          .seeMore {
-                             font-size: 1.2rem;
+                             font-size: 1.25rem;
+                         }
+                     }
+                }
+                .card__modal {
+                    .modal-info {
+                        width: 80%;
+                        margin-top: 50px;
+                        .modal-subtitle {
+                            font-size: 1.2rem;
+                            margin-bottom: 20px;
+                        }
+                        .modal-title {
+                            font-size: 3rem;
+                        }
+                        .modal-intro {
+                            font-size: 1.7rem;
+                            margin-bottom: 30px;
+                        }
+                        .modal-description {
+                            font-size: 1.25rem;
+                            margin-bottom: 30px;
+                        }
+                     }
+                     .modal-video-container{
+                         padding: 30px 0;
+                         .modal-video {
+                              margin: 20px auto;
+                              width: 80%;
+                              video {
+                                  width: 100%;
+                              } 
                          }
                      }
                 }
