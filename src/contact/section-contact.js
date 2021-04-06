@@ -11,8 +11,8 @@ export const renderContact = () => {
             ${createSectionTitle(sectionTitle.contact)}
             <p class="contact-desc">${contact[0].description}</p>
             <div class="contact-download">   
-              ${createLinkedButton('./CV/CV_ThaoNguyen-EN.pdf', contact[0].download[0], 'filled', 'downloadUF', 'btn-en')}
-              ${createLinkedButton('./CV/CV_ThaoNguyen-FR.pdf', contact[0].download[1], 'filled', 'downloadF', 'btn-fr')}      
+              ${createLinkedButton('./CV/CV_ThaoNguyen_EN_website.pdf', contact[0].download[0], 'filled', 'downloadUF', 'btn-en')}
+              ${createLinkedButton('./CV/CV_ThaoNguyen_FR_website.pdf', contact[0].download[1], 'filled', 'downloadF', 'btn-fr')}      
             </div>
             <div class="social-network">
               <a href="https://www.linkedin.com/in/thaongtp/" target="_blank"><i class="fab fa-linkedin"></i></a>

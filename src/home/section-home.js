@@ -15,7 +15,7 @@ export const renderHome = () => `
     </div>
     <div class="home-buttons">
         <a href="#portfolio" class="btn btn-homeUF"><span>VIEW PORTFOLIO</span></a>
-        <a href="./CV/CV_ThaoNguyen-EN.pdf" target="_blank" class="btn btn-homeF"><span>DOWNLOAD CV</span></a>
+        <a href="./CV/CV_ThaoNguyen_EN_website.pdf" target="_blank" class="btn btn-homeF"><span>DOWNLOAD CV</span></a>
     </div>
     <p class="home-message">I’m looking for a 6 - 8 week internship starting on 24 May 2021.</p>
     </div>

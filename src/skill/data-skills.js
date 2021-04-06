@@ -4,14 +4,14 @@ export const skills = [
     title: 'Frontend',
     icon: '<i class="fas fa-laptop"></i>',
     description: 'Click below to find more info.',
-    contentClick: ['HTML-CSS-SASS', 'React - Angular', 'Bootstrap-Tailwind', 'WordPress-Drupal'],
+    contentClick: ['HTML-CSS-SASS', 'React - Angular', 'Bootstrap-Tailwind CSS', 'WordPress'],
   },
   {
     heading: 'Ba',
     title: 'Backend',
     icon: '<i class="fas fa-code"></i>',
     description: 'Click below to find more info.',
-    contentClick: ['C# - Asp.NET', 'Javascript - NodeJS', 'PHP - Symfony', 'Python'],
+    contentClick: ['C# - Asp.NET', 'PHP - Symfony', 'Javascript - NodeJS', 'Python'],
   },
   {
     heading: 'Da',
@@ -25,7 +25,7 @@ export const skills = [
     title: 'Mobile',
     icon: '<i class="fas fa-mobile-alt"></i>',
     description: 'Click below to find more info.',
-    contentClick: ['Xamarin', 'Phonegap', 'Cordova', 'Ionic'],
+    contentClick: ['Ionic', 'Cordova'],
   },
   {
     heading: 'To',
@@ -39,6 +39,6 @@ export const skills = [
     title: 'Others',
     icon: '<i class="fas fa-search-plus"></i>',
     description: 'Click below to find more info.',
-    contentClick: ['Apache - IIS', 'Photoshop - AdobeXD', 'SCRUM - RAD', 'SEO'],
+    contentClick: ['AdobeXD', 'Photoshop', 'SCRUM - RAD', 'Apache - IIS'],
   },
 ];
