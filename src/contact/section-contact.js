@@ -22,7 +22,7 @@ export const renderContact = () => {
           <footer class="footer">
             <hr />
             <div class="footer-container">
-              <div class="copyright">&copy; 2021 by Thao Nguyen.<br />With Vanilla JavaScript, HTML & SASS.</div>
+              <div class="copyright">&copy; 2021 by Thao Nguyen.<br />With Vanilla JavaScript & SASS.</div>
               <div class="fun-hobbies">
                 My little fun hobbies:&nbsp;&nbsp; 
                 <a href="https://www.youtube.com/user/concut88/featured" target="_blank"><i class="fab fa-youtube"></i></a>

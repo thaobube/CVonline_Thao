@@ -17,7 +17,7 @@ export const renderHome = () => `
         <a href="#portfolio" class="btn btn-homeUF"><span>VIEW PORTFOLIO</span></a>
         <a href="./CV/CV_ThaoNguyen_EN_website.pdf" target="_blank" class="btn btn-homeF"><span>DOWNLOAD CV</span></a>
     </div>
-    <p class="home-message">I’m looking for a 6 - 8 week internship starting on 24 May 2021.</p>
+    <p class="home-message">My favourite technologies to work with are C#.Net and Angular</p>
     </div>
 <div class="fixedButton"><a href="#home"><i class="fas fa-chevron-up"></i></a></div>
 `;

@@ -73,7 +73,7 @@ export const renderPortfolio = () => {
   let content = `
   ${createSectionTitle(sectionTitle.portfolio)}
   <div class="intro-portfolio">
-  Over the past year or so, I have taken my first steps towards becoming a web app developer. From simple first exercises with HTML and CSS, to small projects with Javascript and React, from the basic concepts of object-oriented programming with C # and PHP to projects with ASP.NET MVC and Symfony framework. I really want to save those first steps as a diary of my journey through projects that I have worked on. The current list of projects is still incomplete. I will continuously update the projects in the near future. 
+  Over the past year or so, I have taken my first steps towards becoming a web app developer. From simple first exercises with HTML and CSS, to small projects with Vanilla Javascript, React and Angular (Ionic), as well as from basic concepts of object-oriented programming with C # and PHP to projects with ASP.NET MVC and Symfony framework. I really want to save those first steps as a diary of my journey through projects that I have worked on. The current list of projects is still incomplete. I will continuously update the projects in the near future. 
   </div>
   <div class="filters">`;
   switch (state.currentPortfolioButton) {
