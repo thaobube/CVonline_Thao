@@ -4,7 +4,7 @@ export const skills = [
     title: 'Frontend',
     icon: '<i class="fas fa-laptop"></i>',
     description: 'Click below to find more info.',
-    contentClick: ['HTML-CSS-SASS', 'React - Angular', 'Bootstrap-Tailwind CSS', 'WordPress'],
+    contentClick: ['HTML-CSS-SASS', 'Angular', 'Bootstrap-Tailwind CSS', 'React-Vanilla JS'],
   },
   {
     heading: 'Ba',

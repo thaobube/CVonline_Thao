@@ -33,6 +33,17 @@ export const portfolioAll = [
     gitLink: 'https://github.com/thaobube/HomeshareASP',
   },
   {
+    img: 'Kinder_Tracker.jpg',
+    subtitle: 'PHP-Symfony',
+    title: 'Kinder-Tracker',
+    language: 'php',
+    intro: 'Kid\'s Activity Diary at Nursery - PHP-Symfony project',
+    description: 'This application is developed based on the idea of wanting to digitalize a child\'s activity tracker at kindergarten/daycare. So, it is like an online simulation of a daily kid’s activity diary.You can find my Github link for this project or watch the video below to see some main functions of the App.<br /><br /><em>Done by May, 2021</em>',
+    video: 'Kinder_Tracker.mp4',
+    appLink: '#',
+    gitLink: 'https://github.com/thaobube/Kinder-Tracker',
+  },
+  {
     img: 'Hackerflix1.jpg',
     subtitle: 'Javascript',
     title: 'Hackerflix',
@@ -43,17 +54,7 @@ export const portfolioAll = [
     appLink: 'https://thaobube-hackerflix.netlify.app/',
     gitLink: 'https://github.com/thaobube/Hackerflix',
   },
-  {
-    img: 'covidkiller.jpg',
-    subtitle: 'Javascript',
-    title: 'Covid Killer',
-    language: 'js',
-    intro: 'A SPA for ordering Covid-19 vaccines',
-    description: 'This is my project done for the JavaScript exam at Interface3 for less than 7 hours. This is a single web application that implements html injection from javascript and event delegation. Users can filter the validated vaccines, sort vaccines by price and add vaccines to cart then confirm/ cancel or continue to order.<br /><br />You can view the live version, find the code source on my Github or watch the video below to see some main functions of the Web App.<br /><br /><em>Done by December, 2020</em>',
-    video: 'Covid_killer.mp4',
-    appLink: 'https://thaobube-covid-killer.netlify.app/',
-    gitLink: 'https://github.com/thaobube/Covid-Killer',
-  },
+
   {
     img: 'mobile_scanner1.jpg',
     subtitle: 'Ionic-Angular',
@@ -87,7 +88,17 @@ export const portfolioAll = [
     appLink: '#',
     gitLink: 'https://github.com/thaobube/Mobile-App-Demo/tree/main/src/app/cart',
   },
-
+  {
+    img: 'covidkiller.jpg',
+    subtitle: 'Javascript',
+    title: 'Covid Killer',
+    language: 'js',
+    intro: 'A SPA for ordering Covid-19 vaccines',
+    description: 'This is my project done for the JavaScript exam at Interface3 for less than 7 hours. This is a single web application that implements html injection from javascript and event delegation. Users can filter the validated vaccines, sort vaccines by price and add vaccines to cart then confirm/ cancel or continue to order.<br /><br />You can view the live version, find the code source on my Github or watch the video below to see some main functions of the Web App.<br /><br /><em>Done by December, 2020</em>',
+    video: 'Covid_killer.mp4',
+    appLink: 'https://thaobube-covid-killer.netlify.app/',
+    gitLink: 'https://github.com/thaobube/Covid-Killer',
+  },
   {
     img: 'CVwebsite.jpg',
     subtitle: 'Javascript',
@@ -210,17 +221,7 @@ export const portfolioAll = [
     appLink: '#',
     gitLink: 'https://github.com/thaobube/WAD19-HTML-CSS-Exam',
   },
-  {
-    img: 'Symfony.jpg',
-    subtitle: 'PHP-Symfony',
-    title: 'Nursery Diary',
-    language: 'php',
-    intro: 'Kid Diary at Nursery - PHP-Symforny project',
-    description: 'Comming soon in April/May, 2021!',
-    video: '#',
-    appLink: '#',
-    gitLink: '#',
-  },
+
 ];
 
 export const portfolioAsp = portfolioAll.filter((el) => el.language.includes('asp'));
